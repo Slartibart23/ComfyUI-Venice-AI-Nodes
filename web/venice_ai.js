@@ -94,7 +94,10 @@ function showInfo(node, text) {
   if (!w) {
     const { ComfyWidgets } = window.comfyAPI.widgets;
     w = ComfyWidgets.STRING(node, "venice_info", ["STRING", { multiline: true }], app).widget;
+    // Neither saved in the workflow nor sent with the prompt: a changed input
+    // would make ComfyUI re-run (and re-bill) the node instead of using its cache.
     w.serialize = false;
+    w.options = { ...(w.options || {}), serialize: false };
     if (w.inputEl) {
       w.inputEl.readOnly = true;
       w.inputEl.style.opacity = 0.8;

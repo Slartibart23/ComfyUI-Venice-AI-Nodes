@@ -244,6 +244,7 @@ class VideoNodeTests(unittest.TestCase):
 
     def fake_request(self, method, path, payload=None, api_key="", timeout=0, accept=""):
         self.retrieves += 1
+        self.retrieve_body = payload
         if self.retrieves == 1:
             body = json.dumps({"status": "PROCESSING", "average_execution_time": 100,
                                "execution_duration": 50}).encode()
@@ -277,7 +278,8 @@ class VideoNodeTests(unittest.TestCase):
         self.assertEqual(tuple(last.shape), (1, 48, 64, 3))
         self.assertIn("$0.50", info)
         self.assertIn("duration 3s not offered", info)
-        self.assertEqual(self.calls[-1][0], "/video/complete")
+        self.assertFalse(any(q == "/video/complete" for q, _ in self.calls))
+        self.assertTrue(self.retrieve_body["delete_media_on_completion"])
         self.assertEqual(out["ui"]["images"][0]["subfolder"], "venice_ai")
 
     def test_image_missing(self):

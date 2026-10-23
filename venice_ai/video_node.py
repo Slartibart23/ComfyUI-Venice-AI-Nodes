@@ -168,11 +168,14 @@ class VeniceVideo:
         print(f"{LOG} queued {mid} ({queue_id}), price {price_text}")
 
         path, ui_type = self._target_path(mid, queue_id, keep_raw_copy)
-        self._wait_and_download(mid, queue_id, queued.get("download_url"), key, path, timeout_minutes)
-        try:
-            api.post_json("/video/complete", {"model": mid, "queue_id": queue_id}, key, timeout=60)
-        except VeniceError as err:
-            print(f"{LOG} could not delete the video at Venice (it expires anyway): {err}")
+        download_url = queued.get("download_url")
+        self._wait_and_download(mid, queue_id, download_url, key, path, timeout_minutes)
+        if download_url:
+            # pre-signed download: remove the media at Venice only after our copy exists
+            try:
+                api.post_json("/video/complete", {"model": mid, "queue_id": queue_id}, key, timeout=60)
+            except VeniceError as err:
+                print(f"{LOG} video not removed at Venice (it expires after 24 h anyway): {err}")
 
         took = time.time() - started
         info = head + f"\nDone in {took:.0f} s · {path}" + "".join("\nNote: " + n for n in notes)
@@ -296,6 +299,9 @@ class VeniceVideo:
         pbar = comfy.utils.ProgressBar(100)
         deadline = time.time() + timeout_minutes * 60
         body = {"model": mid, "queue_id": queue_id}
+        if not download_url:
+            # the video arrives in the retrieve response itself; Venice may delete it right after
+            body["delete_media_on_completion"] = True
         while True:
             _check_interrupt(queue_id)
             resp = api.request("POST", "/video/retrieve", body, key, timeout=600,
