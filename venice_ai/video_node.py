@@ -137,7 +137,12 @@ class VeniceVideo:
                                              generate_audio, seedance_consent, image, end_image,
                                              reference_images, video, audio, notes)
         mid = e["id"]
-        key = api.resolve_api_key(api_key)
+        try:
+            key = api.resolve_api_key(api_key)
+        except VeniceError:
+            if not price_only:
+                raise
+            key = ""  # the price quote works without a key
 
         quote = api.post_json("/video/quote", quote_payload, key, timeout=60).get("quote")
         price = float(quote) if quote is not None else None

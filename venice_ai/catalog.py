@@ -322,16 +322,20 @@ def video_aspect_ratios() -> list:
     return ["auto"] + [a for a in _union("video", "aspect_ratios") if a != "auto"]
 
 
+def _with_auto(values: list, extra: tuple = ()) -> list:
+    return ["auto"] + [v for v in values if v not in ("auto", *extra)] + list(extra)
+
+
 def image_aspect_ratios() -> list:
-    return ["auto"] + _union("image", "aspectRatios") + ["custom"]
+    return _with_auto(_union("image", "aspectRatios"), ("custom",))
 
 
 def image_resolutions() -> list:
-    return ["auto"] + _union("image", "resolutions")
+    return _with_auto(_union("image", "resolutions"))
 
 
 def image_qualities() -> list:
-    return ["auto"] + _union("image", "qualities")
+    return _with_auto(_union("image", "qualities"))
 
 
 PREVIEW_MAX_HEIGHT = 768

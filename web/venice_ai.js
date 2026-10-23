@@ -80,7 +80,7 @@ async function applyConstraints(node, kind) {
     const ars = (c.aspect_ratios || []).filter((a) => a !== "auto");
     restrict(node, "aspect_ratio", ["auto", ...ars]);
   } else {
-    const ratios = c.aspectRatios || [];
+    const ratios = (c.aspectRatios || []).filter((a) => a !== "auto");
     // models without fixed ratios take width/height: all ratios + custom stay available
     restrict(node, "aspect_ratio", ratios.length ? ["auto", ...ratios] : null);
     restrict(node, "resolution", ["auto", ...(c.resolutions || [])]);

@@ -294,7 +294,7 @@ class VideoNodeTests(unittest.TestCase):
 
     def test_price_only_blocks_outputs(self):
         img = torch.rand(1, 480, 640, 3)
-        out = self.run_node("wan-3-0-image-to-video", image=img, price_only=True)
+        out = self.run_node("wan-3-0-image-to-video", image=img, price_only=True, api_key="")  # works without a key
         video, path, last, prompt, info = out["result"]
         self.assertEqual(type(video).__name__, "ExecutionBlocker")
         self.assertIn("Price only", info)
