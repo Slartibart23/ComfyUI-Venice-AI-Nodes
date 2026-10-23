@@ -80,6 +80,9 @@ def video(e: dict) -> str:
     if lo and hi:
         inputs += f", ratio {lo}–{hi}"
     lines.append(f"Inputs: {inputs}")
+    if kind == "R2V":
+        lines.append("Tip: refer to the references in the prompt as @Image1, @Image2 … "
+                     "(documented by Venice for Grok and Kling R2V)")
     q = e.get("quote") or {}
     if q.get("usd") is not None:
         lines.append(f"Price: ~{_usd(q['usd'])} for {q.get('duration', '')} {q.get('resolution', '')}".rstrip()

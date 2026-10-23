@@ -146,7 +146,7 @@ class VeniceImageEdit:
                 f"Price: ~${cost:.3f} · {'UNCENSORED' if e['uncensored'] else 'censored'}")
         if notes:
             info += "\n" + "\n".join("Note: " + n for n in notes)
-        print(f"{LOG} {info}")
+        api.log(info)
         return {"ui": {"text": [info]}, "result": (tensor, prompt, info)}
 
     @staticmethod

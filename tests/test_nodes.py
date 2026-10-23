@@ -369,6 +369,23 @@ class VideoNodeTests(unittest.TestCase):
         self.run_node("wan-3-0-reference-to-video", reference_images=refs, image=torch.rand(1, 512, 512, 3))
         self.assertEqual(len(self.payload()["reference_image_urls"]), 4)
 
+    def test_auto_aspect_ratio_for_models_with_a_ratio_list(self):
+        refs = torch.rand(3, 512, 512, 3)
+        self.run_node("wan-3-0-reference-to-video", reference_images=refs)  # list has no "auto"
+        p = self.payload()
+        self.assertEqual(p["aspect_ratio"], "adaptive")
+        self.assertEqual(len(p["reference_image_urls"]), 3)  # batch -> separate images
+        self.assertEqual(self.payload("/video/quote")["aspect_ratio"], "adaptive")
+        self.calls.clear(); self.retrieves = 0
+        self.run_node("gemini-omni-flash-image-to-video", image=torch.rand(1, 1280, 720, 3))  # portrait
+        self.assertEqual(self.payload()["aspect_ratio"], "9:16")
+        self.calls.clear(); self.retrieves = 0
+        self.run_node("gemini-omni-flash-1-1-text-to-video")
+        self.assertEqual(self.payload()["aspect_ratio"], "16:9")
+        self.calls.clear(); self.retrieves = 0
+        self.run_node("seedance-2-5-image-to-video-basic", image=torch.rand(1, 720, 1280, 3))  # no ratio list
+        self.assertNotIn("aspect_ratio", self.payload())
+
     def test_reference_too_small(self):
         with self.assertRaises(api.VeniceError) as cm:
             self.run_node("seedance-2-5-image-to-video-basic", image=torch.rand(1, 200, 400, 3))

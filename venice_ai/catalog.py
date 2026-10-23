@@ -207,12 +207,12 @@ def start_background_refresh() -> None:
             data = fetch_catalog(quote_videos=quotes, previous=current)
             save(data, _cache_path())
             _set_catalog(data)
-            print(f"{api.LOG} model list updated: {len(data['image'])} image, {len(data['edit'])} edit, "
+            api.log(f"model list updated: {len(data['image'])} image, {len(data['edit'])} edit, "
                   f"{len(data['video'])} video models"
                   + (", video prices refreshed" if quotes else "")
                   + " (reload the browser tab to see the changes)")
         except Exception as e:
-            print(f"{api.LOG} model list refresh skipped: {e}")
+            api.log(f"model list refresh skipped: {e}")
 
     threading.Thread(target=run, name="venice-catalog-refresh", daemon=True).start()
 

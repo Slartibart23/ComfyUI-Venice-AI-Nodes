@@ -47,10 +47,31 @@ def _nearest(value: str, allowed: list, key) -> str:
     return min(numeric, key=lambda a: (abs(key(a) - v), key(a)))
 
 
+def _ratio_value(ar: str) -> float:
+    try:
+        a, b = ar.split(":")
+        return float(a) / float(b)
+    except ValueError:
+        return 0.0
+
+
+def _auto_aspect_ratio(allowed: list, images=None) -> str:
+    """'auto' for a model with a ratio list: its own auto/adaptive value, else the
+    ratio closest to the input image, else 16:9 (or the first one)."""
+    for v in ("auto", "adaptive"):
+        if v in allowed:
+            return v
+    numeric = [a for a in allowed if _ratio_value(a)]
+    if images is not None and numeric:
+        h, w = int(images.shape[1]), int(images.shape[2])
+        return min(numeric, key=lambda a: abs(_ratio_value(a) - w / h))
+    return "16:9" if "16:9" in allowed else allowed[0]
+
+
 def _check_interrupt(queue_id: str):
     import comfy.model_management as mm
     if mm.processing_interrupted():
-        print(f"{LOG} Stopped waiting. Venice still finishes and bills queue {queue_id}; "
+        api.log(f"Stopped waiting. Venice still finishes and bills queue {queue_id}; "
               f"the result is not downloaded.")
         mm.throw_exception_if_processing_interrupted()
 
@@ -75,7 +96,8 @@ class VeniceVideo:
                 "resolution": (catalog.video_resolutions(), {"default": "720p"}),
                 "aspect_ratio": (catalog.video_aspect_ratios(), {
                     "default": "auto",
-                    "tooltip": "auto = model default / taken from the start image."}),
+                    "tooltip": "auto = the model's own auto/adaptive mode, else the ratio closest to the "
+                               "input image (16:9 without image)."}),
                 "generate_audio": ("BOOLEAN", {
                     "default": True, "tooltip": "Only for models with switchable audio."}),
                 "preview": ("BOOLEAN", {
@@ -153,7 +175,7 @@ class VeniceVideo:
 
         if price_only:
             info = head + "\nPrice only: nothing generated." + "".join("\nNote: " + n for n in notes)
-            print(f"{LOG} {info}")
+            api.log(info)
             b = _blocked()
             return {"ui": {"text": [info]}, "result": (b, b, b, prompt, info)}
         if price is not None and price > max_price_usd:
@@ -165,7 +187,7 @@ class VeniceVideo:
         queue_id = queued.get("queue_id")
         if not queue_id:
             raise VeniceError(f"{LOG} Venice did not return a queue_id: {queued}")
-        print(f"{LOG} queued {mid} ({queue_id}), price {price_text}")
+        api.log(f"queued {mid} ({queue_id}), price {price_text}")
 
         path, ui_type = self._target_path(mid, queue_id, keep_raw_copy)
         download_url = queued.get("download_url")
@@ -175,11 +197,11 @@ class VeniceVideo:
             try:
                 api.post_json("/video/complete", {"model": mid, "queue_id": queue_id}, key, timeout=60)
             except VeniceError as err:
-                print(f"{LOG} video not removed at Venice (it expires after 24 h anyway): {err}")
+                api.log(f"video not removed at Venice (it expires after 24 h anyway): {err}")
 
         took = time.time() - started
         info = head + f"\nDone in {took:.0f} s · {path}" + "".join("\nNote: " + n for n in notes)
-        print(f"{LOG} {info}")
+        api.log(info)
         ui = {"text": [info],
               "images": [{"filename": os.path.basename(path), "subfolder": OUTPUT_SUBFOLDER, "type": ui_type}],
               "animated": [True]}
@@ -217,13 +239,15 @@ class VeniceVideo:
                 notes.append(f"resolution {resolution} not offered by this model, used {r}")
             payload["resolution"] = r
         ars = c.get("aspect_ratios") or []
-        if ars and aspect_ratio != "auto":
-            if aspect_ratio in ars:
-                payload["aspect_ratio"] = aspect_ratio
-            else:
-                notes.append(f"aspect ratio {aspect_ratio} not offered, model default used")
-        elif ars and "auto" in ars:
-            payload["aspect_ratio"] = "auto"
+        if ars:
+            # Models with a ratio list need one of its values (Venice: "aspect_ratio: Required")
+            first_image = image if image is not None else reference_images
+            ar = aspect_ratio if aspect_ratio in ars else _auto_aspect_ratio(ars, first_image)
+            if aspect_ratio != "auto" and ar != aspect_ratio:
+                notes.append(f"aspect ratio {aspect_ratio} not offered, used {ar}")
+            elif aspect_ratio == "auto" and ar != "auto":
+                notes.append(f"aspect ratio auto -> {ar}")
+            payload["aspect_ratio"] = ar
         if c.get("audio_configurable"):
             payload["audio"] = bool(generate_audio)
 

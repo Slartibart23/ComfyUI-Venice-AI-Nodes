@@ -23,6 +23,16 @@ class VeniceError(RuntimeError):
     pass
 
 
+def log(text: str) -> None:
+    """Print to the console without ever failing on characters the console cannot show
+    (a crash here would come after a paid generation)."""
+    line = f"{LOG} {text}"
+    try:
+        print(line)
+    except UnicodeEncodeError:
+        print(line.encode("ascii", "replace").decode("ascii"))
+
+
 # --------------------------------------------------------------------------- #
 # API key
 # --------------------------------------------------------------------------- #
