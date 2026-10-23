@@ -11,6 +11,9 @@
 - Fix: video models with a ratio list but no 'auto' (e.g. Wan 3.0, Gemini Omni Flash, LTX 2.3, Runway)
   failed with 'aspect_ratio: Required'; auto now sends the model's auto/adaptive value, else the ratio
   closest to the input image (16:9 without image)
+- MiniMax H3 Max Recast: person photos (image / reference_images, up to 4, left to right) are sent as
+  reference_image_urls, so the people in the input video are replaced; fact sheet explains usage and
+  per-second pricing
 - Console output can no longer crash a node on characters a Windows console cannot show
 - Model list filters (browser only, saved with the workflow): type and audio input (video), combines
   several images (edit), uncensored only (all)

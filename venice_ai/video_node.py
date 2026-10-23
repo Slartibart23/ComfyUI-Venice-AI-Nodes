@@ -12,6 +12,8 @@ from .api import LOG, VeniceError
 
 POLL_SECONDS = 5
 MAX_REFERENCE_IMAGES = 30
+# video-to-video models that take person photos as reference_image_urls (Venice model pages)
+V2V_PERSON_REFERENCES = {"minimax-h3-max-recast": 4}
 OUTPUT_SUBFOLDER = "venice_ai"
 SEEDANCE_CONSENT = {"confirmed_terms_and_privacy": True, "confirmed_legal_right": True,
                     "confirmed_screening_acknowledged": True}
@@ -272,9 +274,23 @@ class VeniceVideo:
         elif kind == "V2V":
             if video is None:
                 raise VeniceError(f"{LOG} {e['name']} is a video-to-video model: connect a video.")
-            payload["video_url"] = media.video_to_data_url(video)
-            if image is not None:
+            person_limit = V2V_PERSON_REFERENCES.get(mid)
+            if person_limit:
+                # person photos, matched left to right to the people in the video
+                refs = [t[i] for t in (image, reference_images) if t is not None for i in range(t.shape[0])]
+                if len(refs) > person_limit:
+                    raise VeniceError(f"{LOG} {e['name']} takes at most {person_limit} person photos, "
+                                      f"{len(refs)} are connected. Nothing was billed.")
+                for t in (image, reference_images):
+                    if t is not None:
+                        self._check_ref_size(c, t)
+                if refs:
+                    payload["reference_image_urls"] = [media.image_to_data_url(r) for r in refs]
+                else:
+                    notes.append("no person photo connected (image / reference_images)")
+            elif image is not None:
                 payload["image_url"] = media.image_to_data_url(image[0])
+            payload["video_url"] = media.video_to_data_url(video)
         elif image is not None:
             notes.append("start image ignored (text-to-video model)")
 

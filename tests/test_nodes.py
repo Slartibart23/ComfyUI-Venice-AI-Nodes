@@ -402,6 +402,40 @@ class VideoNodeTests(unittest.TestCase):
         self.assertIn("video_url", self.payload("/video/quote"))
 
 
+class RecastTests(VideoNodeTests):
+    def video(self):
+        path = os.path.join(TMP, "in.mp4")
+        with open(path, "wb") as f:
+            f.write(self.mp4)
+        return sys.modules["comfy_api.latest"].InputImpl.VideoFromFile(path)
+
+    def test_recast_sends_person_photos_as_references(self):
+        persons = torch.rand(2, 512, 512, 3)
+        self.run_node("minimax-h3-max-recast", video=self.video(), reference_images=persons,
+                      prompt="replace the people")
+        p = self.payload()
+        self.assertEqual(len(p["reference_image_urls"]), 2)
+        self.assertNotIn("image_url", p)
+        self.assertTrue(p["video_url"].startswith("data:video/mp4"))
+
+    def test_recast_too_many_persons(self):
+        with self.assertRaises(api.VeniceError) as cm:
+            self.run_node("minimax-h3-max-recast", video=self.video(), image=torch.rand(1, 512, 512, 3),
+                          reference_images=torch.rand(4, 512, 512, 3))
+        self.assertIn("at most 4", str(cm.exception))
+        self.assertEqual(self.calls, [])
+
+    def test_other_v2v_keeps_image_url(self):
+        self.run_node("wan-2-7-video-to-video", video=self.video(), image=torch.rand(1, 512, 512, 3))
+        p = self.payload()
+        self.assertIn("image_url", p)
+        self.assertNotIn("reference_image_urls", p)
+
+    def test_recast_profile(self):
+        text = profiles.video(catalog.catalog()["video"]["minimax-h3-max-recast"])
+        self.assertIn("up to 4 person photos", text)
+
+
 class EditNodeTests(unittest.TestCase):
     def run_node(self, model, image_1, content_type="image/png", **kw):
         self.sent = {}

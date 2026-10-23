@@ -5,6 +5,13 @@ from . import catalog
 TAGS = {"cinematic": "cinematic", "photorealistic": "photorealistic", "fast": "fast",
         "long_duration": "long clips", "high_resolution": "high res", "ultra_high_resolution": "4K",
         "open_source": "open source"}
+RECAST = {
+    "minimax-h3-max-recast": (
+        "Replaces the people in the input video: connect up to 4 person photos to image / "
+        "reference_images (one face each, matched left to right). Video up to 300 s, output has no "
+        "audio, billed per second of input video (about $0.36/s at 768P, $0.54/s at 1080P): "
+        "raise max_price_usd."),
+}
 KIND_TEXT = {"T2V": "text to video", "I2V": "image to video", "R2V": "reference images to video",
              "V2V": "video to video"}
 
@@ -80,6 +87,8 @@ def video(e: dict) -> str:
     if lo and hi:
         inputs += f", ratio {lo}–{hi}"
     lines.append(f"Inputs: {inputs}")
+    if e["id"] in RECAST:
+        lines.append(RECAST[e["id"]])
     if kind == "R2V":
         lines.append("Tip: refer to the references in the prompt as @Image1, @Image2 … "
                      "(documented by Venice for Grok and Kling R2V)")
