@@ -1,0 +1,16 @@
+# Venice AI favourites: copy this file into your ComfyUI folder (next to Venice_AI_API.txt).
+# One model ID per line. These models are shown first with a star in the model lists,
+# in the order of this file. Lines starting with # are ignored.
+# The IDs are the last part of each entry in the model list.
+
+# image
+z-image-turbo
+chroma
+qwen-image-3
+grok-imagine-image-2-0
+
+# video
+seedance-2-5-image-to-video-basic
+wan-3-0-image-to-video
+minimax-h3-max-image-to-video
+minimax-h3-max-turbo-image-to-video

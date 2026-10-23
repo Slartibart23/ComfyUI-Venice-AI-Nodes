@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-venice-ai-nodes"
+description = "Unofficial Venice AI API nodes: every Venice image and video model (prices and censored/uncensored in the model list, per-model durations/resolutions, cheap preview runs, price limit) plus Video Save Plus, Save Image + Prompt TXT and Load & Resize Image + Filename. Needs your own Venice API key. Not affiliated with Venice.ai."
+version = "1.0.0"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes"
+
+[tool.comfy]
+PublisherId = "slartibart23b"
+DisplayName = "Venice AI Nodes (unofficial)"
+Icon = ""

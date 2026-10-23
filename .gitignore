@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.env
+.venv
+*.log
+.DS_Store
+Thumbs.db
+# never commit an API key
+Venice_AI_API.txt
+# local model cache when run outside ComfyUI
+data/venice_ai/

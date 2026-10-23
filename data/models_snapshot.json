@@ -1,0 +1,7980 @@
+{
+ "fetched": "2026-10-23T13:54:38+00:00",
+ "quotes_fetched": "2026-10-23T13:56:12+00:00",
+ "image": {
+  "venice-sd35": {
+   "id": "venice-sd35",
+   "name": "Venice SD35",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 1500,
+    "steps": {
+     "default": 25,
+     "max": 30
+    },
+    "widthHeightDivisor": 16
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "grok-imagine-image-2-0": {
+   "id": "grok-imagine-image-2-0",
+   "name": "Grok Imagine 2.0",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 7500,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "defaultQuality": "medium",
+    "qualities": [
+     "low",
+     "medium"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "16:9",
+     "9:16",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.07,
+      "diem": 0.07
+     },
+     "2K": {
+      "usd": 0.1,
+      "diem": 0.1
+     }
+    },
+    "quality": {
+     "1K": {
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     },
+     "2K": {
+      "low": {
+       "usd": 0.07,
+       "diem": 0.07
+      },
+      "medium": {
+       "usd": 0.1,
+       "diem": 0.1
+      }
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "grok-imagine-image-quality": {
+   "id": "grok-imagine-image-quality",
+   "name": "Grok Imagine High Quality (SOTA)",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 7500,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "16:9",
+     "9:16",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.06,
+      "diem": 0.06
+     },
+     "2K": {
+      "usd": 0.09,
+      "diem": 0.09
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "krea-2-turbo": {
+   "id": "krea-2-turbo",
+   "name": "Krea 2 Turbo",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 5000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.04,
+      "diem": 0.04
+     },
+     "2K": {
+      "usd": 0.06,
+      "diem": 0.06
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "flux-2-pro": {
+   "id": "flux-2-pro",
+   "name": "Flux 2 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 3000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.03,
+     "diem": 0.03
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "flux-2-max": {
+   "id": "flux-2-max",
+   "name": "Flux 2 Max",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 3000,
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "auto",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.09,
+     "diem": 0.09
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "flux-3-image": {
+   "id": "flux-3-image",
+   "name": "Flux 3",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 32000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.12,
+      "diem": 0.12
+     },
+     "2K": {
+      "usd": 0.29,
+      "diem": 0.29
+     },
+     "4K": {
+      "usd": 0.98,
+      "diem": 0.98
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "gpt-image-2-5-flare": {
+   "id": "gpt-image-2-5-flare",
+   "name": "GPT Image 2.5 Flare",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "supportsTransparentBackground": true,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.07,
+      "diem": 0.07
+     },
+     "2K": {
+      "usd": 0.15,
+      "diem": 0.15
+     },
+     "4K": {
+      "usd": 0.23,
+      "diem": 0.23
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.07,
+       "diem": 0.07
+      },
+      "low": {
+       "usd": 0.03,
+       "diem": 0.03
+      },
+      "medium": {
+       "usd": 0.04,
+       "diem": 0.04
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.15,
+       "diem": 0.15
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.05,
+       "diem": 0.05
+      }
+     },
+     "4K": {
+      "high": {
+       "usd": 0.23,
+       "diem": 0.23
+      },
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "gpt-image-2-5-sunburst": {
+   "id": "gpt-image-2-5-sunburst",
+   "name": "GPT Image 2.5 Sunburst",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "supportsTransparentBackground": true,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.07,
+      "diem": 0.07
+     },
+     "2K": {
+      "usd": 0.15,
+      "diem": 0.15
+     },
+     "4K": {
+      "usd": 0.23,
+      "diem": 0.23
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.07,
+       "diem": 0.07
+      },
+      "low": {
+       "usd": 0.03,
+       "diem": 0.03
+      },
+      "medium": {
+       "usd": 0.04,
+       "diem": 0.04
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.15,
+       "diem": 0.15
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.05,
+       "diem": 0.05
+      }
+     },
+     "4K": {
+      "high": {
+       "usd": 0.23,
+       "diem": 0.23
+      },
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "gpt-image-2": {
+   "id": "gpt-image-2",
+   "name": "GPT Image 2",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.27,
+      "diem": 0.27
+     },
+     "2K": {
+      "usd": 0.51,
+      "diem": 0.51
+     },
+     "4K": {
+      "usd": 0.84,
+      "diem": 0.84
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.26,
+       "diem": 0.26
+      },
+      "low": {
+       "usd": 0.02,
+       "diem": 0.02
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.5,
+       "diem": 0.5
+      },
+      "low": {
+       "usd": 0.03,
+       "diem": 0.03
+      },
+      "medium": {
+       "usd": 0.13,
+       "diem": 0.13
+      }
+     },
+     "4K": {
+      "high": {
+       "usd": 0.83,
+       "diem": 0.83
+      },
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.21,
+       "diem": 0.21
+      }
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "gpt-image-1-5": {
+   "id": "gpt-image-1-5",
+   "name": "GPT Image 1.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 5000,
+    "supportsTransparentBackground": true,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "2:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.26,
+     "diem": 0.26
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "hunyuan-image-v3": {
+   "id": "hunyuan-image-v3",
+   "name": "Hunyuan Image 3.0",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 3000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.09,
+     "diem": 0.09
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "ideogram-v4": {
+   "id": "ideogram-v4",
+   "name": "Ideogram V4",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.06,
+     "diem": 0.06
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "ideogram-v4-5": {
+   "id": "ideogram-v4-5",
+   "name": "Ideogram V4.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.26,
+      "diem": 0.26
+     },
+     "2K": {
+      "usd": 0.26,
+      "diem": 0.26
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.26,
+       "diem": 0.26
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.26,
+       "diem": 0.26
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "imagineart-1.5-pro": {
+   "id": "imagineart-1.5-pro",
+   "name": "ImagineArt 1.5 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.06,
+     "diem": 0.06
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "krea-v2-large": {
+   "id": "krea-v2-large",
+   "name": "Krea v2 Large",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 5000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "2:3",
+     "9:16"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1,
+    "maxStyleReferences": 3,
+    "supportsStyleReferenceStrength": true
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.07,
+     "diem": 0.07
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "krea-v2-medium": {
+   "id": "krea-v2-medium",
+   "name": "Krea v2 Medium",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 5000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "2:3",
+     "9:16"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1,
+    "maxStyleReferences": 3,
+    "supportsStyleReferenceStrength": true
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.04,
+     "diem": 0.04
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "luma-uni-1": {
+   "id": "luma-uni-1",
+   "name": "Luma Uni-1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 6000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1,
+    "maxStyleReferences": 3,
+    "supportsStyleReferenceStrength": false
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "luma-uni-1-max": {
+   "id": "luma-uni-1-max",
+   "name": "Luma Uni-1 Max",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 6000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1,
+    "maxStyleReferences": 3,
+    "supportsStyleReferenceStrength": false
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.12,
+     "diem": 0.12
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "muse-image": {
+   "id": "muse-image",
+   "name": "Muse Image",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.02,
+     "diem": 0.02
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "nano-banana-2": {
+   "id": "nano-banana-2",
+   "name": "Nano Banana 2",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 32768,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.1,
+      "diem": 0.1
+     },
+     "2K": {
+      "usd": 0.14,
+      "diem": 0.14
+     },
+     "4K": {
+      "usd": 0.19,
+      "diem": 0.19
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "nano-banana-2-1": {
+   "id": "nano-banana-2-1",
+   "name": "Nano Banana 2.1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 32768,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.1,
+      "diem": 0.1
+     },
+     "2K": {
+      "usd": 0.14,
+      "diem": 0.14
+     },
+     "4K": {
+      "usd": 0.19,
+      "diem": 0.19
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "nano-banana-pro": {
+   "id": "nano-banana-pro",
+   "name": "Nano Banana Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 32768,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.18,
+      "diem": 0.18
+     },
+     "2K": {
+      "usd": 0.23,
+      "diem": 0.23
+     },
+     "4K": {
+      "usd": 0.35,
+      "diem": 0.35
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "nano-banana-2-lite": {
+   "id": "nano-banana-2-lite",
+   "name": "Nano Banana 2 Lite",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.06,
+     "diem": 0.06
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "recraft-v4": {
+   "id": "recraft-v4",
+   "name": "Recraft V4",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "recraft-v4-pro": {
+   "id": "recraft-v4-pro",
+   "name": "Recraft V4 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.29,
+     "diem": 0.29
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "seedream-v4": {
+   "id": "seedream-v4",
+   "name": "Seedream V4.5",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "seedream-v5-lite": {
+   "id": "seedream-v5-lite",
+   "name": "Seedream V5 Lite",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5",
+     "4:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "seedream-v5-pro": {
+   "id": "seedream-v5-pro",
+   "name": "Seedream V5 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.06,
+      "diem": 0.06
+     },
+     "2K": {
+      "usd": 0.11,
+      "diem": 0.11
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image-2": {
+   "id": "qwen-image-2",
+   "name": "Qwen Image 2",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image-2-pro": {
+   "id": "qwen-image-2-pro",
+   "name": "Qwen Image 2 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.1,
+     "diem": 0.1
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "wan-2-7-text-to-image": {
+   "id": "wan-2-7-text-to-image",
+   "name": "Wan 2.7",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 3000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.0375,
+     "diem": 0.0375
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "wan-2-7-pro-text-to-image": {
+   "id": "wan-2-7-pro-text-to-image",
+   "name": "Wan 2.7 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 3000,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.09375,
+     "diem": 0.09375
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "grok-imagine-image": {
+   "id": "grok-imagine-image",
+   "name": "Grok Imagine",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 7500,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "16:9",
+     "9:16",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.03,
+      "diem": 0.03
+     },
+     "2K": {
+      "usd": 0.04,
+      "diem": 0.04
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "lustify-sdxl": {
+   "id": "lustify-sdxl",
+   "name": "Lustify SDXL",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 1500,
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 8
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "lustify-v7": {
+   "id": "lustify-v7",
+   "name": "Lustify v7",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 1500,
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 8
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "lustify-v8": {
+   "id": "lustify-v8",
+   "name": "Lustify v8",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 1500,
+    "steps": {
+     "default": 30,
+     "max": 50
+    },
+    "widthHeightDivisor": 8
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image": {
+   "id": "qwen-image",
+   "name": "Qwen Image",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 2048,
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.03,
+     "diem": 0.03
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "wai-Illustrious": {
+   "id": "wai-Illustrious",
+   "name": "Anime (WAI)",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 1500,
+    "steps": {
+     "default": 25,
+     "max": 30
+    },
+    "widthHeightDivisor": 16
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "z-image-turbo": {
+   "id": "z-image-turbo",
+   "name": "Z-Image Turbo",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 7500,
+    "steps": {
+     "default": 8,
+     "max": 8
+    },
+    "widthHeightDivisor": 8
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "chroma": {
+   "id": "chroma",
+   "name": "Chroma",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 7500,
+    "steps": {
+     "default": 10,
+     "max": 10
+    },
+    "widthHeightDivisor": 8
+   },
+   "pricing": {
+    "generation": {
+     "usd": 0.01,
+     "diem": 0.01
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image-3": {
+   "id": "qwen-image-3",
+   "name": "Qwen Image 3",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.04,
+      "diem": 0.04
+     },
+     "2K": {
+      "usd": 0.04,
+      "diem": 0.04
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image-3-pro": {
+   "id": "qwen-image-3-pro",
+   "name": "Qwen Image 3 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.05,
+      "diem": 0.05
+     },
+     "2K": {
+      "usd": 0.09,
+      "diem": 0.09
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image-2-1-turbo": {
+   "id": "qwen-image-2-1-turbo",
+   "name": "Qwen Image 2.1 Turbo",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "2K": {
+      "usd": 0.02,
+      "diem": 0.02
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  },
+  "qwen-image-2-1-pro": {
+   "id": "qwen-image-2-1-pro",
+   "name": "Qwen Image 2.1 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "promptCharacterLimit": 10000,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "defaultAspectRatio": "1:1",
+    "steps": {
+     "default": 20,
+     "max": 50
+    },
+    "widthHeightDivisor": 1
+   },
+   "pricing": {
+    "resolutions": {
+     "1K": {
+      "usd": 0.05,
+      "diem": 0.05
+     },
+     "2K": {
+      "usd": 0.05,
+      "diem": 0.05
+     }
+    },
+    "upscale": {
+     "2x": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "4x": {
+      "usd": 0.08,
+      "diem": 0.08
+     }
+    }
+   }
+  }
+ },
+ "video": {
+  "gemini-omni-flash-1-1-text-to-video": {
+   "id": "gemini-omni-flash-1-1-text-to-video",
+   "name": "Gemini Omni Flash 1.1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "360p",
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.47,
+    "duration": "4s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "gemini-omni-flash-1-1-image-to-video": {
+   "id": "gemini-omni-flash-1-1-image-to-video",
+   "name": "Gemini Omni Flash 1.1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "360p",
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.47,
+    "duration": "4s",
+    "resolution": "720p"
+   }
+  },
+  "gemini-omni-flash-1-1-reference-to-video": {
+   "id": "gemini-omni-flash-1-1-reference-to-video",
+   "name": "Gemini Omni Flash 1.1 R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "360p",
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.47,
+    "duration": "4s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "gemini-omni-flash-1-1-video-to-video": {
+   "id": "gemini-omni-flash-1-1-video-to-video",
+   "name": "Gemini Omni Flash 1.1 Edit",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "360p",
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "Auto"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "seedance-1-5-pro-text-to-video-basic": {
+   "id": "seedance-1-5-pro-text-to-video-basic",
+   "name": "Seedance 1.5 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 3500
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.16,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-1-5-pro-image-to-video-basic": {
+   "id": "seedance-1-5-pro-image-to-video-basic",
+   "name": "Seedance 1.5 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 3500,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.21,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "seedance-2-0-text-to-video-basic": {
+   "id": "seedance-2-0-text-to-video-basic",
+   "name": "Seedance 2.0",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "4k",
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.95,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-0-image-to-video-basic": {
+   "id": "seedance-2-0-image-to-video-basic",
+   "name": "Seedance 2.0",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "4k",
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.95,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "seedance-2-0-reference-to-video-basic": {
+   "id": "seedance-2-0-reference-to-video-basic",
+   "name": "Seedance 2.0 R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "4k",
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.95,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-0-fast-text-to-video-basic": {
+   "id": "seedance-2-0-fast-text-to-video-basic",
+   "name": "Seedance 2.0 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 3500
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.76,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-0-fast-image-to-video-basic": {
+   "id": "seedance-2-0-fast-image-to-video-basic",
+   "name": "Seedance 2.0 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 3500,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.76,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "seedance-2-0-fast-reference-to-video-basic": {
+   "id": "seedance-2-0-fast-reference-to-video-basic",
+   "name": "Seedance 2.0 Fast R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 3500,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.76,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-0-mini-text-to-video-basic": {
+   "id": "seedance-2-0-mini-text-to-video-basic",
+   "name": "Seedance 2.0 Mini",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.47,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-0-mini-image-to-video-basic": {
+   "id": "seedance-2-0-mini-image-to-video-basic",
+   "name": "Seedance 2.0 Mini",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.47,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "seedance-2-0-mini-reference-to-video-basic": {
+   "id": "seedance-2-0-mini-reference-to-video-basic",
+   "name": "Seedance 2.0 Mini R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.47,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-5-text-to-video-basic": {
+   "id": "seedance-2-5-text-to-video-basic",
+   "name": "Seedance 2.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s",
+     "21s",
+     "22s",
+     "23s",
+     "24s",
+     "25s",
+     "26s",
+     "27s",
+     "28s",
+     "29s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 15000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.44,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-5-image-to-video-basic": {
+   "id": "seedance-2-5-image-to-video-basic",
+   "name": "Seedance 2.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s",
+     "21s",
+     "22s",
+     "23s",
+     "24s",
+     "25s",
+     "26s",
+     "27s",
+     "28s",
+     "29s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 15000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.44,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "seedance-2-5-reference-to-video-basic": {
+   "id": "seedance-2-5-reference-to-video-basic",
+   "name": "Seedance 2.5 R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s",
+     "21s",
+     "22s",
+     "23s",
+     "24s",
+     "25s",
+     "26s",
+     "27s",
+     "28s",
+     "29s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 15000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.44,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-5-us-text-to-video-private": {
+   "id": "seedance-2-5-us-text-to-video-private",
+   "name": "Seedance 2.5 US",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s",
+     "21s",
+     "22s",
+     "23s",
+     "24s",
+     "25s",
+     "26s",
+     "27s",
+     "28s",
+     "29s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 15000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 3.12,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "seedance-2-5-us-image-to-video-private": {
+   "id": "seedance-2-5-us-image-to-video-private",
+   "name": "Seedance 2.5 US",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s",
+     "21s",
+     "22s",
+     "23s",
+     "24s",
+     "25s",
+     "26s",
+     "27s",
+     "28s",
+     "29s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 15000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 3.12,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "seedance-2-5-us-reference-to-video-private": {
+   "id": "seedance-2-5-us-reference-to-video-private",
+   "name": "Seedance 2.5 US R2V",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s",
+     "21s",
+     "22s",
+     "23s",
+     "24s",
+     "25s",
+     "26s",
+     "27s",
+     "28s",
+     "29s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 15000,
+    "reference_image_min_short_side_pixels": 300,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 3.05,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-text-to-video": {
+   "id": "wan-3-0-text-to-video",
+   "name": "Wan 3.0",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.65,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-image-to-video": {
+   "id": "wan-3-0-image-to-video",
+   "name": "Wan 3.0",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.65,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-reference-to-video": {
+   "id": "wan-3-0-reference-to-video",
+   "name": "Wan 3.0 Reference",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.65,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-prime-text-to-video": {
+   "id": "wan-3-0-prime-text-to-video",
+   "name": "Wan 3.0 Prime",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.91,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-prime-image-to-video": {
+   "id": "wan-3-0-prime-image-to-video",
+   "name": "Wan 3.0 Prime",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.91,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-prime-reference-to-video": {
+   "id": "wan-3-0-prime-reference-to-video",
+   "name": "Wan 3.0 Prime Reference",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.91,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-pro-text-to-video": {
+   "id": "wan-3-0-pro-text-to-video",
+   "name": "Wan 3.0 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "2k",
+     "4k"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.18,
+    "duration": "5s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-pro-image-to-video": {
+   "id": "wan-3-0-pro-image-to-video",
+   "name": "Wan 3.0 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "2k",
+     "4k"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.18,
+    "duration": "5s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-pro-reference-to-video": {
+   "id": "wan-3-0-pro-reference-to-video",
+   "name": "Wan 3.0 Pro Reference",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "2k",
+     "4k"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.18,
+    "duration": "5s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-prime-pro-text-to-video": {
+   "id": "wan-3-0-prime-pro-text-to-video",
+   "name": "Wan 3.0 Prime Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "2k",
+     "4k"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.66,
+    "duration": "5s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-prime-pro-image-to-video": {
+   "id": "wan-3-0-prime-pro-image-to-video",
+   "name": "Wan 3.0 Prime Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "2k",
+     "4k"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.66,
+    "duration": "5s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-3-0-prime-pro-reference-to-video": {
+   "id": "wan-3-0-prime-pro-reference-to-video",
+   "name": "Wan 3.0 Prime Pro Reference",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "2k",
+     "4k"
+    ],
+    "durations": [
+     "2s",
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "25s",
+     "30s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 20000,
+    "reference_image_min_short_side_pixels": 240
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 1.66,
+    "duration": "5s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-2-7-text-to-video": {
+   "id": "wan-2-7-text-to-video",
+   "name": "Wan 2.7",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "wan-2-7-image-to-video": {
+   "id": "wan-2-7-image-to-video",
+   "name": "Wan 2.7",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "wan-2-7-reference-to-video": {
+   "id": "wan-2-7-reference-to-video",
+   "name": "Wan 2.7 Reference",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": true,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "wan-2-7-video-to-video": {
+   "id": "wan-2-7-video-to-video",
+   "name": "Wan 2.7 Edit",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "Auto"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "wan-2-7-enhanced-image-to-video": {
+   "id": "wan-2-7-enhanced-image-to-video",
+   "name": "Wan 2.7 Enhanced",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.64,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "wan-2-7-enhanced-text-to-video": {
+   "id": "wan-2-7-enhanced-text-to-video",
+   "name": "Wan 2.7 Enhanced",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.64,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "wan-2-2-enhanced-image-to-video": {
+   "id": "wan-2-2-enhanced-image-to-video",
+   "name": "Wan 2.2 Enhanced",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "5s",
+     "8s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.4,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "happyhorse-1-1-text-to-video": {
+   "id": "happyhorse-1-1-text-to-video",
+   "name": "HappyHorse 1.1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9",
+     "9:21",
+     "5:4",
+     "4:5"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "happyhorse-1-1-image-to-video": {
+   "id": "happyhorse-1-1-image-to-video",
+   "name": "HappyHorse 1.1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "reference_image_min_short_side_pixels": 300
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "happyhorse-1-1-reference-to-video": {
+   "id": "happyhorse-1-1-reference-to-video",
+   "name": "HappyHorse 1.1 Reference",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9",
+     "9:21",
+     "5:4",
+     "4:5"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "reference_image_min_short_side_pixels": 400
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "happyhorse-1-0-text-to-video": {
+   "id": "happyhorse-1-0-text-to-video",
+   "name": "HappyHorse 1.0",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "happyhorse-1-0-image-to-video": {
+   "id": "happyhorse-1-0-image-to-video",
+   "name": "HappyHorse 1.0",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "reference_image_min_short_side_pixels": 300
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "happyhorse-1-0-reference-to-video": {
+   "id": "happyhorse-1-0-reference-to-video",
+   "name": "HappyHorse 1.0 Reference",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "reference_image_min_short_side_pixels": 400
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "happyhorse-1-0-video-to-video": {
+   "id": "happyhorse-1-0-video-to-video",
+   "name": "HappyHorse 1.0 Edit",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "Auto"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true,
+    "reference_image_min_short_side_pixels": 300
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "wan-2.6-image-to-video": {
+   "id": "wan-2.6-image-to-video",
+   "name": "Wan 2.6",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "wan-2.6-flash-image-to-video": {
+   "id": "wan-2.6-flash-image-to-video",
+   "name": "Wan 2.6 Flash",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.28,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "wan-2.6-text-to-video": {
+   "id": "wan-2.6-text-to-video",
+   "name": "Wan 2.6",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "wan-2.5-preview-image-to-video": {
+   "id": "wan-2.5-preview-image-to-video",
+   "name": "Wan 2.5 Preview",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "wan-2.5-preview-text-to-video": {
+   "id": "wan-2.5-preview-text-to-video",
+   "name": "Wan 2.5 Preview",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "1080p",
+     "720p",
+     "480p"
+    ],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "grok-imagine-text-to-video-private": {
+   "id": "grok-imagine-text-to-video-private",
+   "name": "Grok Imagine",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "3:2",
+     "1:1",
+     "2:3",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.44,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "grok-imagine-image-to-video-private": {
+   "id": "grok-imagine-image-to-video-private",
+   "name": "Grok Imagine",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480p",
+     "720p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.44,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "grok-imagine-reference-to-video-private": {
+   "id": "grok-imagine-reference-to-video-private",
+   "name": "Grok Imagine R2V",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "3:2",
+     "1:1",
+     "2:3",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.44,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "grok-imagine-video-to-video-private": {
+   "id": "grok-imagine-video-to-video-private",
+   "name": "Grok Imagine",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480p",
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "grok-imagine-1-5-text-to-video-private": {
+   "id": "grok-imagine-1-5-text-to-video-private",
+   "name": "Grok Imagine 1.5",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "3:2",
+     "1:1",
+     "2:3",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.81,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "grok-imagine-1-5-image-to-video-private": {
+   "id": "grok-imagine-1-5-image-to-video-private",
+   "name": "Grok Imagine 1.5",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.82,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "grok-imagine-1-5-reference-to-video-private": {
+   "id": "grok-imagine-1-5-reference-to-video-private",
+   "name": "Grok Imagine 1.5 R2V",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "3:2",
+     "1:1",
+     "2:3",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.82,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "grok-imagine-1-5-lite-text-to-video": {
+   "id": "grok-imagine-1-5-lite-text-to-video",
+   "name": "Grok Imagine 1.5 Lite",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "3:2",
+     "1:1",
+     "2:3",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.18,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "grok-imagine-1-5-lite-image-to-video": {
+   "id": "grok-imagine-1-5-lite-image-to-video",
+   "name": "Grok Imagine 1.5 Lite",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 4096
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.19,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "ltx-2-v2-3-fast-image-to-video": {
+   "id": "ltx-2-v2-3-fast-image-to-video",
+   "name": "LTX Video 2.3 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s",
+     "12s",
+     "14s",
+     "16s",
+     "18s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.4,
+    "duration": "6s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-v2-3-fast-text-to-video": {
+   "id": "ltx-2-v2-3-fast-text-to-video",
+   "name": "LTX Video 2.3 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s",
+     "12s",
+     "14s",
+     "16s",
+     "18s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.4,
+    "duration": "6s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-v2-3-full-image-to-video": {
+   "id": "ltx-2-v2-3-full-image-to-video",
+   "name": "LTX Video 2.3 Full Quality",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.53,
+    "duration": "6s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-v2-3-full-text-to-video": {
+   "id": "ltx-2-v2-3-full-text-to-video",
+   "name": "LTX Video 2.3 Full Quality",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.53,
+    "duration": "6s",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-5-fast-image-to-video": {
+   "id": "ltx-2-5-fast-image-to-video",
+   "name": "LTX Video 2.5 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "auto",
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s",
+     "12s",
+     "14s",
+     "16s",
+     "18s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.59,
+    "duration": "6s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-5-fast-text-to-video": {
+   "id": "ltx-2-5-fast-text-to-video",
+   "name": "LTX Video 2.5 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s",
+     "12s",
+     "14s",
+     "16s",
+     "18s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.59,
+    "duration": "6s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-5-pro-image-to-video": {
+   "id": "ltx-2-5-pro-image-to-video",
+   "name": "LTX Video 2.5 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "auto",
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.79,
+    "duration": "6s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ltx-2-5-pro-text-to-video": {
+   "id": "ltx-2-5-pro-text-to-video",
+   "name": "LTX Video 2.5 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.79,
+    "duration": "6s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "ovi-image-to-video": {
+   "id": "ovi-image-to-video",
+   "name": "Ovi",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "5s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.22,
+    "duration": "5s"
+   }
+  },
+  "minimax-h3-max-text-to-video": {
+   "id": "minimax-h3-max-text-to-video",
+   "name": "MiniMax H3 Max",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480P",
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.31,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "minimax-h3-max-image-to-video": {
+   "id": "minimax-h3-max-image-to-video",
+   "name": "MiniMax H3 Max",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480P",
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.31,
+    "duration": "5s",
+    "resolution": "768P"
+   }
+  },
+  "minimax-h3-max-multi-angle": {
+   "id": "minimax-h3-max-multi-angle",
+   "name": "MiniMax H3 Max Multi-Angle",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480P",
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.31,
+    "duration": "5s",
+    "resolution": "768P"
+   }
+  },
+  "minimax-h3-max-reference-to-video": {
+   "id": "minimax-h3-max-reference-to-video",
+   "name": "MiniMax H3 Max R2V",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "adaptive",
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480P",
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000,
+    "reference_image_min_short_side_pixels": 256,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.48,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "minimax-h3-max-recast": {
+   "id": "minimax-h3-max-recast",
+   "name": "MiniMax H3 Max Recast",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "Auto"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true,
+    "prompt_character_limit": 2000,
+    "reference_image_min_short_side_pixels": 256,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "minimax-h3-max-turbo-text-to-video": {
+   "id": "minimax-h3-max-turbo-text-to-video",
+   "name": "MiniMax H3 Max Turbo",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "480P",
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.16,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "minimax-h3-max-turbo-image-to-video": {
+   "id": "minimax-h3-max-turbo-image-to-video",
+   "name": "MiniMax H3 Max Turbo",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "480P",
+     "768P",
+     "1080P"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 10000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.16,
+    "duration": "5s",
+    "resolution": "768P"
+   }
+  },
+  "kling-2.6-pro-text-to-video": {
+   "id": "kling-2.6-pro-text-to-video",
+   "name": "Kling 2.6 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.39,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-2.6-pro-image-to-video": {
+   "id": "kling-2.6-pro-image-to-video",
+   "name": "Kling 2.6 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.39,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-2.5-turbo-pro-text-to-video": {
+   "id": "kling-2.5-turbo-pro-text-to-video",
+   "name": "Kling 2.5 Turbo Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.39,
+    "duration": "5s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "kling-2.5-turbo-pro-image-to-video": {
+   "id": "kling-2.5-turbo-pro-image-to-video",
+   "name": "Kling 2.5 Turbo Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "5s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.39,
+    "duration": "5s"
+   }
+  },
+  "kling-v3-4k-text-to-video": {
+   "id": "kling-v3-4k-text-to-video",
+   "name": "Kling V3 4K",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 2.31,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-v3-4k-reference-to-video": {
+   "id": "kling-v3-4k-reference-to-video",
+   "name": "Kling V3 4K R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 2.31,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-o3-4k-text-to-video": {
+   "id": "kling-o3-4k-text-to-video",
+   "name": "Kling O3 4K",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 2.31,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-o3-4k-image-to-video": {
+   "id": "kling-o3-4k-image-to-video",
+   "name": "Kling O3 4K",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 2.31,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-o3-4k-reference-to-video": {
+   "id": "kling-o3-4k-reference-to-video",
+   "name": "Kling O3 4K R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 2.31,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-o3-pro-text-to-video": {
+   "id": "kling-o3-pro-text-to-video",
+   "name": "Kling O3 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-o3-pro-image-to-video": {
+   "id": "kling-o3-pro-image-to-video",
+   "name": "Kling O3 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-o3-pro-reference-to-video": {
+   "id": "kling-o3-pro-reference-to-video",
+   "name": "Kling O3 Pro R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-o3-standard-text-to-video": {
+   "id": "kling-o3-standard-text-to-video",
+   "name": "Kling O3 Standard",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.46,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-o3-standard-image-to-video": {
+   "id": "kling-o3-standard-image-to-video",
+   "name": "Kling O3 Standard",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.46,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-o3-standard-reference-to-video": {
+   "id": "kling-o3-standard-reference-to-video",
+   "name": "Kling O3 Standard R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.46,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-v3-pro-motion-control": {
+   "id": "kling-v3-pro-motion-control",
+   "name": "Kling V3 Pro Motion Control",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "Auto"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "kling-v3-pro-text-to-video": {
+   "id": "kling-v3-pro-text-to-video",
+   "name": "Kling V3 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-v3-pro-image-to-video": {
+   "id": "kling-v3-pro-image-to-video",
+   "name": "Kling V3 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-v3-standard-motion-control": {
+   "id": "kling-v3-standard-motion-control",
+   "name": "Kling V3 Standard Motion Control",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "Auto"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "kling-v3-standard-text-to-video": {
+   "id": "kling-v3-standard-text-to-video",
+   "name": "Kling V3 Standard",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.46,
+    "duration": "5s",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "kling-v3-standard-image-to-video": {
+   "id": "kling-v3-standard-image-to-video",
+   "name": "Kling V3 Standard",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.46,
+    "duration": "5s",
+    "audio": false
+   }
+  },
+  "kling-v3-turbo-pro-text-to-video": {
+   "id": "kling-v3-turbo-pro-text-to-video",
+   "name": "Kling V3 Turbo Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "kling-v3-turbo-pro-image-to-video": {
+   "id": "kling-v3-turbo-pro-image-to-video",
+   "name": "Kling V3 Turbo Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.77,
+    "duration": "5s"
+   }
+  },
+  "kling-v3-turbo-standard-text-to-video": {
+   "id": "kling-v3-turbo-standard-text-to-video",
+   "name": "Kling V3 Turbo Standard",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "kling-v3-turbo-standard-image-to-video": {
+   "id": "kling-v3-turbo-standard-image-to-video",
+   "name": "Kling V3 Turbo Standard",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [],
+    "durations": [
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.62,
+    "duration": "5s"
+   }
+  },
+  "longcat-distilled-image-to-video": {
+   "id": "longcat-distilled-image-to-video",
+   "name": "Longcat Distilled",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "30s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.09,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "longcat-distilled-text-to-video": {
+   "id": "longcat-distilled-text-to-video",
+   "name": "Longcat Distilled",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "30s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.09,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "longcat-image-to-video": {
+   "id": "longcat-image-to-video",
+   "name": "Longcat Full Quality",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "30s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.25,
+    "duration": "5s",
+    "resolution": "720p"
+   }
+  },
+  "longcat-text-to-video": {
+   "id": "longcat-text-to-video",
+   "name": "Longcat Full Quality",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1"
+    ],
+    "resolutions": [
+     "720p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s",
+     "30s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.25,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "veo3.1-fast-text-to-video": {
+   "id": "veo3.1-fast-text-to-video",
+   "name": "Veo 3.1 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.44,
+    "duration": "4s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "veo3.1-fast-image-to-video": {
+   "id": "veo3.1-fast-image-to-video",
+   "name": "Veo 3.1 Fast",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.44,
+    "duration": "4s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "veo3.1-full-text-to-video": {
+   "id": "veo3.1-full-text-to-video",
+   "name": "Veo 3.1 Full Quality",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.88,
+    "duration": "4s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "veo3.1-full-image-to-video": {
+   "id": "veo3.1-full-image-to-video",
+   "name": "Veo 3.1 Full Quality",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "4k"
+    ],
+    "durations": [
+     "4s",
+     "6s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.88,
+    "duration": "4s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "gemini-omni-flash-text-to-video": {
+   "id": "gemini-omni-flash-text-to-video",
+   "name": "Gemini Omni Flash",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [],
+    "durations": [
+     "4s",
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.55,
+    "duration": "4s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "gemini-omni-flash-image-to-video": {
+   "id": "gemini-omni-flash-image-to-video",
+   "name": "Gemini Omni Flash",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [],
+    "durations": [
+     "4s",
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.57,
+    "duration": "4s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "gemini-omni-flash-reference-to-video": {
+   "id": "gemini-omni-flash-reference-to-video",
+   "name": "Gemini Omni Flash R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [],
+    "durations": [
+     "4s",
+     "6s",
+     "8s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.57,
+    "duration": "4s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "flux-3-text-to-video": {
+   "id": "flux-3-text-to-video",
+   "name": "Flux 3",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "9:21"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.94,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "flux-3-image-to-video": {
+   "id": "flux-3-image-to-video",
+   "name": "Flux 3",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "9:21"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.94,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "flux-3-first-last-frame-to-video": {
+   "id": "flux-3-first-last-frame-to-video",
+   "name": "Flux 3 First Last Frame",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "9:21"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.94,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "flux-3-extend-video": {
+   "id": "flux-3-extend-video",
+   "name": "Flux 3 Extend",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "9:21"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p",
+     "1440p",
+     "2160p"
+    ],
+    "durations": [
+     "5s",
+     "10s",
+     "15s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "flux-3-max-text-to-video": {
+   "id": "flux-3-max-text-to-video",
+   "name": "Flux 3 Max",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "2:1",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.32,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "flux-3-max-image-to-video": {
+   "id": "flux-3-max-image-to-video",
+   "name": "Flux 3 Max",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "auto",
+     "21:9",
+     "2:1",
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s",
+     "16s",
+     "17s",
+     "18s",
+     "19s",
+     "20s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.32,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "pixverse-v5.6-text-to-video": {
+   "id": "pixverse-v5.6-text-to-video",
+   "name": "PixVerse v5.6",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "5s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.57,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "pixverse-v5.6-image-to-video": {
+   "id": "pixverse-v5.6-image-to-video",
+   "name": "PixVerse v5.6",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "5s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.57,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "pixverse-v5.6-transition": {
+   "id": "pixverse-v5.6-transition",
+   "name": "PixVerse v5.6 Transition",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4"
+    ],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "5s",
+     "8s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.57,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "pixverse-c1-text-to-video": {
+   "id": "pixverse-c1-text-to-video",
+   "name": "PixVerse C1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "2:3",
+     "3:2",
+     "21:9"
+    ],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "3s",
+     "5s",
+     "8s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.28,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "pixverse-c1-image-to-video": {
+   "id": "pixverse-c1-image-to-video",
+   "name": "PixVerse C1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "3s",
+     "5s",
+     "8s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.28,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "pixverse-c1-reference-to-video": {
+   "id": "pixverse-c1-reference-to-video",
+   "name": "PixVerse C1 R2V",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "2:3",
+     "3:2",
+     "21:9"
+    ],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "3s",
+     "5s",
+     "8s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.28,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "pixverse-c1-transition": {
+   "id": "pixverse-c1-transition",
+   "name": "PixVerse C1 Transition",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16",
+     "2:3",
+     "3:2",
+     "21:9"
+    ],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "3s",
+     "5s",
+     "8s",
+     "10s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.28,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "vidu-q3-text-to-video": {
+   "id": "vidu-q3-text-to-video",
+   "name": "Vidu Q3",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "4:3",
+     "3:4",
+     "1:1"
+    ],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "3s",
+     "5s",
+     "8s",
+     "10s",
+     "12s",
+     "14s",
+     "16s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.97,
+    "duration": "5s",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "audio": false
+   }
+  },
+  "vidu-q3-image-to-video": {
+   "id": "vidu-q3-image-to-video",
+   "name": "Vidu Q3",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "360p",
+     "540p",
+     "720p",
+     "1080p"
+    ],
+    "durations": [
+     "3s",
+     "5s",
+     "8s",
+     "10s",
+     "12s",
+     "14s",
+     "16s"
+    ],
+    "audio": true,
+    "audio_configurable": true,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.97,
+    "duration": "5s",
+    "resolution": "720p",
+    "audio": false
+   }
+  },
+  "runway-gen4-5": {
+   "id": "runway-gen4-5",
+   "name": "Runway Gen-4.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "resolutions": [],
+    "durations": [
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 1000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.81,
+    "duration": "5s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "runway-gen4-5-text": {
+   "id": "runway-gen4-5-text",
+   "name": "Runway Gen-4.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16"
+    ],
+    "resolutions": [],
+    "durations": [
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 1000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.81,
+    "duration": "5s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "runway-gen4-turbo": {
+   "id": "runway-gen4-turbo",
+   "name": "Runway Gen-4 Turbo",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "9:16",
+     "1:1",
+     "4:3",
+     "3:4",
+     "21:9"
+    ],
+    "resolutions": [],
+    "durations": [
+     "2s",
+     "3s",
+     "4s",
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 1000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.34,
+    "duration": "5s",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "topaz-video-upscale": {
+   "id": "topaz-video-upscale",
+   "name": "Topaz Video Upscale",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "model_type": "video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "2x",
+     "4x"
+    ],
+    "durations": [
+     "Auto"
+    ],
+    "audio": false,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": true
+   },
+   "pricing": {},
+   "quote": null
+  },
+  "minimax-h3-enhanced-text-to-video": {
+   "id": "minimax-h3-enhanced-text-to-video",
+   "name": "MiniMax H3 Enhanced",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "768P",
+     "2K"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 7000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.5,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "minimax-h3-enhanced-reference-to-video": {
+   "id": "minimax-h3-enhanced-reference-to-video",
+   "name": "MiniMax H3 R2V Enhanced",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "768P",
+     "2K"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 7000,
+    "reference_image_min_short_side_pixels": 256,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.5,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "minimax-h3-text-to-video": {
+   "id": "minimax-h3-text-to-video",
+   "name": "MiniMax H3",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "text-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "768P",
+     "2K"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 7000
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.5,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  },
+  "minimax-h3-image-to-video": {
+   "id": "minimax-h3-image-to-video",
+   "name": "MiniMax H3",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [],
+    "resolutions": [
+     "768P",
+     "2K"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": false,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 7000,
+    "reference_image_min_short_side_pixels": 256,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.5,
+    "duration": "5s",
+    "resolution": "768P"
+   }
+  },
+  "minimax-h3-reference-to-video": {
+   "id": "minimax-h3-reference-to-video",
+   "name": "MiniMax H3 R2V",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "model_type": "image-to-video",
+    "aspect_ratios": [
+     "16:9",
+     "21:9",
+     "4:3",
+     "1:1",
+     "3:4",
+     "9:16"
+    ],
+    "resolutions": [
+     "768P",
+     "2K"
+    ],
+    "durations": [
+     "5s",
+     "6s",
+     "7s",
+     "8s",
+     "9s",
+     "10s",
+     "11s",
+     "12s",
+     "13s",
+     "14s",
+     "15s"
+    ],
+    "audio": true,
+    "audio_configurable": false,
+    "audio_input": true,
+    "per_reference_audio": false,
+    "video_input": false,
+    "prompt_character_limit": 7000,
+    "reference_image_min_short_side_pixels": 256,
+    "reference_image_min_aspect_ratio": 0.4,
+    "reference_image_max_aspect_ratio": 2.5
+   },
+   "pricing": {},
+   "quote": {
+    "usd": 0.5,
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "16:9"
+   }
+  }
+ }
+}

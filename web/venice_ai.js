@@ -1,0 +1,147 @@
+// Venice AI · Image / Video:
+// - narrows duration / resolution / aspect ratio / quality to what the selected
+//   model offers (constraints from /venice_ai/catalog)
+// - maps a saved model label with an outdated price to the current label (same model ID)
+// - shows the info text (price, settings, notes) after a run
+
+const { app } = window.comfyAPI.app;
+const { api } = window.comfyAPI.api;
+
+const NODES = { VeniceAI_Image: "image", VeniceAI_Video: "video" };
+const SEP = " · ";
+
+let catalogPromise = null;
+function loadCatalog() {
+  if (!catalogPromise) {
+    catalogPromise = api
+      .fetchApi("/venice_ai/catalog")
+      .then((r) => r.json())
+      .catch((e) => {
+        console.warn("[Venice AI] catalog not available:", e);
+        catalogPromise = null;
+        return { image: {}, video: {} };
+      });
+  }
+  return catalogPromise;
+}
+
+const modelId = (label) => String(label ?? "").split(SEP).pop().replace("★", "").trim();
+const seconds = (d) => (/^\d+s$/.test(d) ? parseInt(d, 10) : 0);
+const height = (r) => {
+  const s = String(r).toLowerCase();
+  if (s === "2k") return 1440;
+  if (s === "4k") return 2160;
+  const m = s.match(/(\d+)p/);
+  return m ? parseInt(m[1], 10) : 0;
+};
+
+function widget(node, name) {
+  return node.widgets?.find((w) => w.name === name);
+}
+
+// Restrict a combo to `values` (null = all original values) and keep the
+// current value if allowed, else the nearest one.
+function restrict(node, name, values, measure) {
+  const w = widget(node, name);
+  if (!w) return;
+  w._veniceAll ??= [...w.options.values];
+  const list = values && values.length ? values : w._veniceAll;
+  w.options.values = list;
+  if (!list.includes(w.value)) {
+    const caseMatch = list.find((v) => String(v).toLowerCase() === String(w.value).toLowerCase());
+    let next = caseMatch ?? list[0];
+    if (!caseMatch && measure && measure(w.value)) {
+      const numeric = list.filter((v) => measure(v));
+      if (numeric.length) {
+        next = numeric.reduce((a, b) =>
+          Math.abs(measure(b) - measure(w.value)) < Math.abs(measure(a) - measure(w.value)) ? b : a);
+      }
+    }
+    w.value = next;
+  }
+}
+
+function fixModelLabel(node) {
+  const w = widget(node, "model");
+  if (!w || w.options.values.includes(w.value)) return;
+  const id = modelId(w.value);
+  const match = w.options.values.find((v) => modelId(v) === id);
+  if (match) w.value = match;
+}
+
+async function applyConstraints(node, kind) {
+  const cat = await loadCatalog();
+  const id = modelId(widget(node, "model")?.value);
+  const c = cat[kind]?.[id];
+  if (!c) return;
+  if (kind === "video") {
+    restrict(node, "duration", c.durations, seconds);
+    restrict(node, "resolution", c.resolutions, height);
+    const ars = (c.aspect_ratios || []).filter((a) => a !== "auto");
+    restrict(node, "aspect_ratio", ["auto", ...ars]);
+  } else {
+    const ratios = c.aspectRatios || [];
+    // models without fixed ratios take width/height: all ratios + custom stay available
+    restrict(node, "aspect_ratio", ratios.length ? ["auto", ...ratios] : null);
+    restrict(node, "resolution", ["auto", ...(c.resolutions || [])]);
+    restrict(node, "quality", ["auto", ...(c.qualities || [])]);
+  }
+  node.setDirtyCanvas?.(true, true);
+}
+
+function showInfo(node, text) {
+  let w = widget(node, "venice_info");
+  if (!w) {
+    const { ComfyWidgets } = window.comfyAPI.widgets;
+    w = ComfyWidgets.STRING(node, "venice_info", ["STRING", { multiline: true }], app).widget;
+    w.serialize = false;
+    if (w.inputEl) {
+      w.inputEl.readOnly = true;
+      w.inputEl.style.opacity = 0.8;
+    }
+  }
+  w.value = text;
+  node.setDirtyCanvas?.(true, true);
+}
+
+app.registerExtension({
+  name: "VeniceAI.ModelConstraints",
+
+  async beforeRegisterNodeDef(nodeType, nodeData) {
+    const kind = NODES[nodeData?.name];
+    if (!kind) return;
+
+    const onNodeCreated = nodeType.prototype.onNodeCreated;
+    nodeType.prototype.onNodeCreated = function () {
+      const r = onNodeCreated?.apply(this, arguments);
+      const node = this;
+      const w = widget(node, "model");
+      if (w) {
+        const cb = w.callback;
+        w.callback = function () {
+          const res = cb?.apply(this, arguments);
+          applyConstraints(node, kind);
+          return res;
+        };
+      }
+      applyConstraints(node, kind);
+      return r;
+    };
+
+    const onConfigure = nodeType.prototype.onConfigure;
+    nodeType.prototype.onConfigure = function () {
+      const r = onConfigure?.apply(this, arguments);
+      fixModelLabel(this);
+      applyConstraints(this, kind);
+      return r;
+    };
+
+    const onExecuted = nodeType.prototype.onExecuted;
+    nodeType.prototype.onExecuted = function (message) {
+      const r = onExecuted?.apply(this, arguments);
+      const text = message?.text;
+      if (text) showInfo(this, Array.isArray(text) ? text.join("\n") : String(text));
+      return r;
+    };
+  },
+});
