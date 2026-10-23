@@ -4,6 +4,7 @@
 // - maps a saved model label with an outdated price to the current label (same model ID)
 // - shows a fact sheet of the selected model (capabilities, inputs, price, removal date)
 //   and, after a run, the run info (price, settings, notes) above it
+// - filters for the model list (type, audio input, combining images, uncensored)
 
 const { app } = window.comfyAPI.app;
 const { api } = window.comfyAPI.api;
@@ -65,10 +66,87 @@ function restrict(node, name, values, measure) {
 
 function fixModelLabel(node) {
   const w = widget(node, "model");
-  if (!w || w.options.values.includes(w.value)) return;
+  const all = w?._veniceAllModels ?? w?.options.values;
+  if (!w || all.includes(w.value)) return;
   const id = modelId(w.value);
-  const match = w.options.values.find((v) => modelId(v) === id);
+  const match = all.find((v) => modelId(v) === id);
   if (match) w.value = match;
+}
+
+// ------------------------------------------------------------------ filters
+// Narrow the model list. Browser only: stored in node.properties (saved with the
+// workflow), never sent with the prompt, so changing a filter never re-runs a node.
+const ALL_TYPES = "all types";
+const TYPES = { "text → video": "T2V", "image → video": "I2V", "reference → video": "R2V", "video → video": "V2V" };
+const FILTERS = {
+  video: [
+    { key: "type", label: "filter: type", combo: [ALL_TYPES, ...Object.keys(TYPES)], def: ALL_TYPES },
+    { key: "audioInput", label: "filter: takes audio input", def: false },
+    { key: "uncensored", label: "filter: uncensored only", def: false },
+  ],
+  edit: [
+    { key: "combine", label: "filter: combines several images", def: false },
+    { key: "uncensored", label: "filter: uncensored only", def: false },
+  ],
+  image: [{ key: "uncensored", label: "filter: uncensored only", def: false }],
+};
+
+function passes(kind, cat, label, f) {
+  const c = cat[kind]?.[modelId(label)];
+  if (!c) return true;
+  if (f.uncensored && !label.includes("UNCENSORED")) return false;
+  if (kind === "video") {
+    if (f.type && f.type !== ALL_TYPES && c.kind !== TYPES[f.type]) return false;
+    if (f.audioInput && !c.audio_input) return false;
+  }
+  if (kind === "edit" && f.combine && !c.combineImages) return false;
+  return true;
+}
+
+async function applyFilter(node, kind, userChange) {
+  const cat = await loadCatalog();
+  const w = widget(node, "model");
+  if (!w) return;
+  w._veniceAllModels ??= [...w.options.values];
+  const f = node.properties?.veniceFilter || {};
+  let list = w._veniceAllModels.filter((label) => passes(kind, cat, label, f));
+  if (!list.length) list = [...w._veniceAllModels]; // nothing matches: show everything
+  if (!list.includes(w.value)) {
+    if (userChange) w.value = list[0];
+    else list = [w.value, ...list]; // a loaded workflow keeps its model visible
+  }
+  w.options.values = list;
+  if (userChange) await applyConstraints(node, kind);
+  node.setDirtyCanvas?.(true, true);
+}
+
+function addFilterWidgets(node, kind) {
+  node.properties ??= {};
+  node.properties.veniceFilter ??= {};
+  const created = FILTERS[kind].map((spec) => {
+    const value = node.properties.veniceFilter[spec.key] ?? spec.def;
+    const cb = (v) => {
+      node.properties.veniceFilter[spec.key] = v;
+      applyFilter(node, kind, true);
+    };
+    const w = spec.combo
+      ? node.addWidget("combo", spec.label, value, cb, { values: spec.combo, serialize: false })
+      : node.addWidget("toggle", spec.label, value, cb, { on: "yes", off: "no", serialize: false });
+    w.serialize = false;
+    w.options.serialize = false;
+    w._veniceFilterKey = spec.key;
+    return w;
+  });
+  // show the filters right above the model list
+  for (const w of created) node.widgets.splice(node.widgets.indexOf(w), 1);
+  node.widgets.splice(node.widgets.indexOf(widget(node, "model")), 0, ...created);
+}
+
+function syncFilterWidgets(node) {
+  const f = node.properties?.veniceFilter || {};
+  for (const w of node.widgets || []) {
+    if (w._veniceFilterKey && f[w._veniceFilterKey] !== undefined) w.value = f[w._veniceFilterKey];
+  }
 }
 
 async function applyConstraints(node, kind) {
@@ -133,22 +211,25 @@ app.registerExtension({
       const node = this;
       const w = widget(node, "model");
       if (w) {
+        w._veniceAllModels = [...w.options.values];
         const cb = w.callback;
         w.callback = function () {
           const res = cb?.apply(this, arguments);
           applyConstraints(node, kind);
           return res;
         };
+        addFilterWidgets(node, kind);
       }
-      applyConstraints(node, kind);
+      applyFilter(node, kind, false).then(() => applyConstraints(node, kind));
       return r;
     };
 
     const onConfigure = nodeType.prototype.onConfigure;
     nodeType.prototype.onConfigure = function () {
       const r = onConfigure?.apply(this, arguments);
+      syncFilterWidgets(this);
       fixModelLabel(this);
-      applyConstraints(this, kind);
+      applyFilter(this, kind, false).then(() => applyConstraints(this, kind));
       return r;
     };
 

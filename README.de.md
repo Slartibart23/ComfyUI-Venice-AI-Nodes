@@ -50,6 +50,11 @@ problemlos neben den Originalen.
   (`+` = größere Formate kosten mehr). Vor jedem Video fragt die Node den echten Preis ab.
 * **UNCENSORED / censored:** so kennzeichnet Venice das Modell. „censored“ heißt nur „nicht als
   unzensiert markiert“, Anbieter können Prompts trotzdem ablehnen.
+* **Filter** über dem Auswahlmenü: in der Video-Node *Typ* (Text, Bild, Referenzbilder oder Video → Video)
+  und *nimmt Audio-Eingabe*, in der Edit-Node *kombiniert mehrere Bilder*, überall *nur unzensiert*.
+  Sie werden im Workflow gespeichert, aber nie mitgeschickt.
+* Unten in jeder Node steht ein **Steckbrief** des gewählten Modells (Länge, Auflösung, Ton, Eingänge,
+  Preis, Stärken, Abschaltdatum); nach einem Lauf stehen die Laufinfos darüber.
 * **ENDS 2026-10-28:** Venice schaltet das Modell an diesem Tag ab (Nachfolger steht in docs/MODELS.de.md).
 * **private:** laut Venice werden deine Daten nicht weitergegeben.
 

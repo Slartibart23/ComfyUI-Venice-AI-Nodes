@@ -8,6 +8,8 @@
 - New: **docs/MODELS.md / MODELS.de.md**: capabilities of every image, edit and video model
   (generated from the model list by `tools/generate_model_docs.py`)
 - New: six **example workflows** with notes in `example_workflows/` (shown as templates in ComfyUI)
+- Model list filters (browser only, saved with the workflow): type and audio input (video), combines
+  several images (edit), uncensored only (all)
 - Model lists mark models Venice is going to remove: `ENDS YYYY-MM-DD`
 - The Image, Image Edit and Video nodes show a fact sheet of the selected model (length, resolution,
   audio, inputs, price, strengths, removal date); after a run the run info is shown above it

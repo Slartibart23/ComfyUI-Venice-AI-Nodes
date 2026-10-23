@@ -70,6 +70,11 @@ Seedance 2.5 · I2V · $1.44/5s · censored · seedance-2-5-image-to-video-basic
   models and providers may still refuse prompts.
 * **private** = Venice states it does not pass your data on; other models are "anonymized" (sent to
   the model provider without your identity).
+* **Filters** above the model list narrow it down: *type* (text / image / reference images / video to video)
+  and *takes audio input* in the video node, *combines several images* in the edit node, *uncensored only*
+  in all three. They are saved with the workflow but never sent with the prompt.
+* Below the settings each node shows a **fact sheet** of the selected model (length, resolution, audio,
+  inputs, price, strengths, removal date); after a run the run info appears above it.
 * **ENDS YYYY-MM-DD** = Venice removes the model on that date (see the replacement in docs/MODELS.md).
 * The list is shipped with the pack and refreshed in the background: models once a day, video
   prices once a week (no API key needed). Reload the browser tab to see changes. Workflows keep
