@@ -106,6 +106,8 @@ def _error_message(status: int, body: bytes) -> str:
         code, text = err.get("code", ""), err.get("message", "")
     else:
         code, text = "", err or body[:300].decode("utf-8", "replace")
+    if text.lstrip().startswith("<"):  # HTML error page from a proxy (e.g. 413)
+        text = {413: "Request Entity Too Large"}.get(status, "error page instead of JSON")
     issues = data.get("issues") or []
     if issues:
         text += " | " + "; ".join(

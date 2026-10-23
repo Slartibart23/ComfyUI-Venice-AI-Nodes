@@ -129,6 +129,7 @@ class VeniceImageEdit:
                 payload["quality"] = q
 
         key = api.resolve_api_key(api_key)
+        media.check_request_size(payload)
         resp = api.request("POST", path, payload, key, timeout=600, accept="image/png, application/json")
         tensor = self._decode(resp)
 

@@ -5,6 +5,7 @@ import io
 import os
 import tempfile
 import wave
+from fractions import Fraction
 
 import numpy as np
 import torch
@@ -12,7 +13,13 @@ from PIL import Image
 
 from .api import LOG, VeniceError
 
-MAX_IMAGE_BYTES = 9 * 1024 * 1024
+# Venice takes media only inside the JSON request (base64 adds a third) and rejects
+# requests above ~32 MB with HTTP 413. Images keep the size you give them (scale them
+# upstream, e.g. with Load & Resize); they are only shrunk when they would not fit.
+MAX_PNG_BYTES = 3 * 1024 * 1024    # larger images are sent as JPEG q92
+MAX_IMAGE_BYTES = 4 * 1024 * 1024  # JPEG still larger: scaled down step by step
+MAX_VIDEO_BYTES = 14 * 1024 * 1024
+MAX_REQUEST_BYTES = 30 * 1024 * 1024
 MAX_AUDIO_SECONDS = 30
 
 
@@ -29,20 +36,46 @@ def tensor_to_pil(img: torch.Tensor) -> Image.Image:
 
 
 def image_to_data_url(img: torch.Tensor) -> str:
-    """PNG (lossless); JPEG q95 when the PNG would be too large for the request."""
+    """Never rescaled: PNG when small, else JPEG q92. Too large even as JPEG -> clear
+    message before anything is sent (scale it upstream, e.g. with Load & Resize)."""
     pil = tensor_to_pil(img)
     buf = io.BytesIO()
     pil.save(buf, "PNG", optimize=False, compress_level=4)
-    if buf.tell() <= MAX_IMAGE_BYTES:
+    if buf.tell() <= MAX_PNG_BYTES:
         return _data_url("image/png", buf.getvalue())
     buf = io.BytesIO()
-    pil.save(buf, "JPEG", quality=95)
+    pil.save(buf, "JPEG", quality=92)
+    if buf.tell() > MAX_IMAGE_BYTES:
+        raise VeniceError(f"{LOG} Input image {pil.width}x{pil.height} is too large to send to Venice "
+                          f"({buf.tell() / 1e6:.1f} MB as JPEG, max. {MAX_IMAGE_BYTES / 1e6:.0f} MB). "
+                          f"Scale it down first, e.g. with 'Venice AI · Load & Resize Image + Filename' "
+                          f"(2048 px on the long side is plenty). Nothing was billed.")
     return _data_url("image/jpeg", buf.getvalue())
 
 
 def image_to_base64(img: torch.Tensor) -> str:
     """Plain base64 (no data: prefix), as the image edit endpoints expect."""
     return image_to_data_url(img).split(",", 1)[1]
+
+
+def check_request_size(payload: dict) -> None:
+    """Fail before sending (and before anything is billed) when Venice would answer 413."""
+    size = sum(len(v) for v in _strings(payload))
+    if size > MAX_REQUEST_BYTES:
+        raise VeniceError(f"{LOG} The request is {size / 1e6:.0f} MB, Venice accepts about "
+                          f"{MAX_REQUEST_BYTES / 1e6:.0f} MB. Use fewer or smaller input images "
+                          f"(e.g. Load & Resize) or a shorter video. Nothing was billed.")
+
+
+def _strings(value):
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, dict):
+        for v in value.values():
+            yield from _strings(v)
+    elif isinstance(value, (list, tuple)):
+        for v in value:
+            yield from _strings(v)
 
 
 def bytes_to_tensor(raw: bytes) -> torch.Tensor:
@@ -91,31 +124,111 @@ def audio_to_data_url(audio: dict) -> str:
 _VIDEO_MIME = {".mp4": "video/mp4", ".mov": "video/quicktime", ".webm": "video/webm"}
 
 
-def video_to_data_url(video) -> str:
-    """ComfyUI VIDEO -> data URL (file bytes when possible, otherwise re-encoded MP4)."""
-    src = None
+def _temp_mp4() -> str:
+    fd, path = tempfile.mkstemp(suffix=".mp4")
+    os.close(fd)
+    return path
+
+
+def _remove(path: str) -> None:
     try:
-        src = video.get_stream_source()
-    except Exception:
+        os.remove(path)
+    except OSError:
         pass
-    if isinstance(src, str) and os.path.isfile(src):
+
+
+def _video_info(path: str):
+    import av
+    with av.open(path) as c:
+        s = c.streams.video[0]
+        seconds = float(c.duration / 1e6) if c.duration else float(s.duration * s.time_base or 0)
+        return s.codec_context.width, s.codec_context.height, max(seconds, 0.1)
+
+
+def transcode_video(src: str, dst: str, max_height: int, bitrate: int) -> None:
+    """H.264 MP4 at most max_height high with the given video bitrate; AAC audio is copied."""
+    import av
+
+    with av.open(src) as inp:
+        vin = inp.streams.video[0]
+        ain = inp.streams.audio[0] if inp.streams.audio else None
+        w, h = vin.codec_context.width, vin.codec_context.height
+        scale = min(1.0, max_height / h)
+        ow, oh = max(2, int(w * scale) // 2 * 2), max(2, int(h * scale) // 2 * 2)
+        with av.open(dst, "w", options={"movflags": "+faststart"}) as out:
+            rate = vin.average_rate or Fraction(24)
+            vout = out.add_stream("libx264", rate=rate)
+            vout.width, vout.height, vout.pix_fmt = ow, oh, "yuv420p"
+            frame_tb = Fraction(rate.denominator, rate.numerator)
+            index = 0
+            vout.bit_rate = bitrate
+            vout.options = {"preset": "veryfast", "maxrate": str(int(bitrate * 1.3)), "bufsize": str(bitrate * 2)}
+            aout = None
+            if ain is not None and ain.codec_context.name == "aac":
+                aout = out.add_stream_from_template(ain)
+            streams = [vin] + ([ain] if aout else [])
+            for packet in inp.demux(*streams):
+                if packet.stream is vin:
+                    for frame in packet.decode():
+                        frame = frame.reformat(width=ow, height=oh, format="yuv420p")
+                        frame.pts, frame.time_base = index, frame_tb  # constant frame rate
+                        index += 1
+                        for p in vout.encode(frame):
+                            out.mux(p)
+                elif packet.dts is not None:
+                    packet.stream = aout
+                    out.mux(packet)
+            for p in vout.encode():
+                out.mux(p)
+
+
+def video_to_data_url(video, max_height: int = 1080, notes: list = None) -> str:
+    """ComfyUI VIDEO -> data URL. Sent unchanged when it fits; only a video too large for
+    the request is re-encoded (at most max_height high, bitrate fitted to the limit)."""
+    src, cleanup = None, []
+    try:
+        try:
+            src = video.get_stream_source()
+        except Exception:
+            src = None
+        if isinstance(src, io.BytesIO):
+            path = _temp_mp4()
+            cleanup.append(path)
+            with open(path, "wb") as f:
+                f.write(src.getvalue())
+            src = path
+        if not (isinstance(src, str) and os.path.isfile(src)):
+            path = _temp_mp4()
+            cleanup.append(path)
+            video.save_to(path)
+            src = path
         ext = os.path.splitext(src)[1].lower()
-        if ext in _VIDEO_MIME:
+        w, h, seconds = _video_info(src)
+        if ext in _VIDEO_MIME and os.path.getsize(src) <= MAX_VIDEO_BYTES:
             with open(src, "rb") as f:
                 return _data_url(_VIDEO_MIME[ext], f.read())
-    if isinstance(src, io.BytesIO):
-        return _data_url("video/mp4", src.getvalue())
-    fd, tmp = tempfile.mkstemp(suffix=".mp4")
-    os.close(fd)
-    try:
-        video.save_to(tmp)
-        with open(tmp, "rb") as f:
+
+        size_mb = os.path.getsize(src) / 1e6
+        bitrate = int(min(8_000_000, max(400_000, MAX_VIDEO_BYTES * 8 * 0.85 / seconds - 160_000)))
+        out = _temp_mp4()
+        cleanup.append(out)
+        for _ in range(3):
+            transcode_video(src, out, max_height, bitrate)
+            if os.path.getsize(out) <= MAX_VIDEO_BYTES:
+                break
+            bitrate = int(bitrate * 0.6)
+        else:
+            raise VeniceError(f"{LOG} The input video ({seconds:.0f} s) is too long to send to Venice even "
+                              f"after compression. Trim it and try again. Nothing was billed.")
+        _, oh, _ = _video_info(out)
+        if notes is not None:
+            notes.append(f"input video re-encoded for upload: {w}x{h} {size_mb:.1f} MB -> "
+                         f"{oh}p {os.path.getsize(out) / 1e6:.1f} MB")
+        with open(out, "rb") as f:
             return _data_url("video/mp4", f.read())
     finally:
-        try:
-            os.remove(tmp)
-        except OSError:
-            pass
+        for path in cleanup:
+            _remove(path)
 
 
 def last_frame(path: str) -> torch.Tensor:

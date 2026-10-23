@@ -276,7 +276,7 @@ class ImageNodeTests(unittest.TestCase):
         self.assertIn("not offered", out["result"][2])
 
 
-class VideoNodeTests(unittest.TestCase):
+class VideoHelpers(unittest.TestCase):
     def setUp(self):
         self.calls = []
         self.retrieves = 0
@@ -313,6 +313,8 @@ class VideoNodeTests(unittest.TestCase):
     def payload(self, path="/video/queue"):
         return next(p for q, p in self.calls if q == path)
 
+
+class VideoNodeTests(VideoHelpers):
     def test_image_to_video_full_run(self):
         img = torch.rand(1, 480, 640, 3)
         out = self.run_node("minimax-h3-max-image-to-video", image=img, duration="3s")
@@ -402,7 +404,7 @@ class VideoNodeTests(unittest.TestCase):
         self.assertIn("video_url", self.payload("/video/quote"))
 
 
-class RecastTests(VideoNodeTests):
+class RecastTests(VideoHelpers):
     def video(self):
         path = os.path.join(TMP, "in.mp4")
         with open(path, "wb") as f:
@@ -434,6 +436,56 @@ class RecastTests(VideoNodeTests):
     def test_recast_profile(self):
         text = profiles.video(catalog.catalog()["video"]["minimax-h3-max-recast"])
         self.assertIn("up to 4 person photos", text)
+
+
+class UploadSizeTests(VideoHelpers):
+    def test_images_keep_their_size(self):
+        y, x = torch.meshgrid(torch.linspace(0, 1, 2400), torch.linspace(0, 1, 3000), indexing="ij")
+        smooth = torch.stack([x, y, (x + y) / 2], dim=-1)  # 3000x2400, compresses well
+        url = media.image_to_data_url(smooth)
+        w, h = Image.open(io.BytesIO(base64.b64decode(url.split(",", 1)[1]))).size
+        self.assertEqual((w, h), (3000, 2400))
+
+    def test_huge_image_gives_a_hint_instead_of_rescaling(self):
+        with self.assertRaises(api.VeniceError) as cm:
+            media.image_to_data_url(torch.rand(3000, 3000, 3))  # noise: ~9 MB even as JPEG
+        self.assertIn("Load & Resize", str(cm.exception))
+        self.assertIn("Nothing was billed", str(cm.exception))
+
+    def test_large_video_is_reencoded(self):
+        import av
+        path = os.path.join(TMP, "big.mp4")
+        with av.open(path, "w") as c:  # noisy 256x256 clip at a high bitrate
+            s = c.add_stream("libx264", rate=24)
+            s.width, s.height, s.pix_fmt, s.bit_rate = 256, 256, "yuv420p", 20_000_000
+            for _ in range(24):
+                frame = av.VideoFrame.from_ndarray((np.random.rand(256, 256, 3) * 255).astype(np.uint8), format="rgb24")
+                for pk in s.encode(frame):
+                    c.mux(pk)
+            for pk in s.encode():
+                c.mux(pk)
+        size = os.path.getsize(path)
+        vid = sys.modules["comfy_api.latest"].InputImpl.VideoFromFile(path)
+        notes = []
+        with mock.patch.object(media, "MAX_VIDEO_BYTES", 1000):
+            with self.assertRaises(api.VeniceError):  # cannot get below 1 kB: clear error
+                media.video_to_data_url(vid, max_height=32, notes=notes)
+        with mock.patch.object(media, "MAX_VIDEO_BYTES", size // 2):
+            url = media.video_to_data_url(vid, max_height=32, notes=notes)
+        self.assertTrue(url.startswith("data:video/mp4;base64,"))
+        self.assertIn("re-encoded", notes[-1])
+
+    def test_request_size_checked_before_queue(self):
+        with mock.patch.object(media, "MAX_REQUEST_BYTES", 1000):
+            with self.assertRaises(api.VeniceError) as cm:
+                self.run_node("wan-3-0-image-to-video", image=torch.rand(1, 512, 512, 3))
+        self.assertIn("Nothing was billed", str(cm.exception))
+        self.assertFalse(any(q == "/video/queue" for q, _ in self.calls))
+
+    def test_413_html_page_is_readable(self):
+        msg = api._error_message(413, b"<html><head><title>413</title></head></html>")
+        self.assertIn("Request Entity Too Large", msg)
+        self.assertNotIn("<html>", msg)
 
 
 class EditNodeTests(unittest.TestCase):

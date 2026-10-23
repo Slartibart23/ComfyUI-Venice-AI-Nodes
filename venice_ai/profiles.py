@@ -70,8 +70,9 @@ def video(e: dict) -> str:
     ars = [a for a in c.get("aspect_ratios") or [] if a]
     lines.append(f"Length: {_durations(c)} · Resolution: "
                  + ", ".join(sorted(c.get("resolutions") or [], key=catalog.resolution_height)))
-    lines.append("Aspect ratio: " + (", ".join(ars) if ars else "from the start image" if kind != "T2V"
-                                     else "model default"))
+    lines.append("Aspect ratio: " + (", ".join(ars) if ars else {"T2V": "model default",
+                                                                  "V2V": "from the input video"}.get(
+        kind, "from the start image")))
     audio = ("generated, switchable" if c.get("audio_configurable") else
              "generated" if c.get("audio") else "none")
     if c.get("audio_input"):

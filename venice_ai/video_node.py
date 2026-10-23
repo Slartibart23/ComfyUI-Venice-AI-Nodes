@@ -185,6 +185,7 @@ class VeniceVideo:
                               f"Nothing was billed. Raise the limit or pick cheaper settings.")
 
         started = time.time()
+        media.check_request_size(payload)
         queued = api.post_json("/video/queue", payload, key, timeout=600)
         queue_id = queued.get("queue_id")
         if not queue_id:
@@ -290,7 +291,8 @@ class VeniceVideo:
                     notes.append("no person photo connected (image / reference_images)")
             elif image is not None:
                 payload["image_url"] = media.image_to_data_url(image[0])
-            payload["video_url"] = media.video_to_data_url(video)
+            target_h = catalog.resolution_height(payload.get("resolution", "")) or 1080
+            payload["video_url"] = media.video_to_data_url(video, max_height=target_h, notes=notes)
         elif image is not None:
             notes.append("start image ignored (text-to-video model)")
 
