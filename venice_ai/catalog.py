@@ -32,6 +32,8 @@ QUOTES_MAX_AGE_HOURS = 24 * 7
 QUOTE_PAUSE_SECONDS = 0.5
 
 KIND_ORDER = {"T2V": 0, "I2V": 1, "R2V": 2, "V2V": 3}
+# our name -> Venice model type ("edit" models are listed by Venice as "inpaint")
+KINDS = {"image": "image", "video": "video", "edit": "inpaint"}
 
 _lock = threading.Lock()
 _catalog = None
@@ -65,9 +67,13 @@ def catalog() -> dict:
     global _catalog
     with _lock:
         if _catalog is None:
-            found = [d for d in (_read(SNAPSHOT_PATH), _read(_cache_path())) if d]
-            _catalog = max(found, key=lambda d: d.get("fetched", "")) if found else {
-                "fetched": "", "image": {}, "video": {}}
+            found = sorted((d for d in (_read(SNAPSHOT_PATH), _read(_cache_path())) if d),
+                           key=lambda d: d.get("fetched", ""), reverse=True)
+            _catalog = dict(found[0]) if found else {"fetched": "", "image": {}, "video": {}}
+            # a cache written by an older version may lack a kind (e.g. "edit")
+            for kind in KINDS:
+                if not _catalog.get(kind):
+                    _catalog[kind] = next((d[kind] for d in found if d.get(kind)), {})
         return _catalog
 
 
@@ -143,6 +149,13 @@ def _entry(m: dict) -> dict:
         "offline": bool(spec.get("offline")),
         "constraints": spec.get("constraints") or {},
         "pricing": spec.get("pricing") or {},
+        # capability info for docs/MODELS.md
+        "sets": spec.get("model_sets") or [],
+        "traits": spec.get("traits") or [],
+        "source": spec.get("modelSource") or "",
+        "web_search": bool(spec.get("supportsWebSearch")),
+        "style_references": bool(spec.get("supportsStyleReferences")),
+        "deprecation": spec.get("deprecation") or None,
     }
 
 
@@ -159,9 +172,9 @@ def _age_hours(stamp: str) -> float:
 def fetch_catalog(quote_videos: bool = True, previous: dict = None,
                   pause: float = QUOTE_PAUSE_SECONDS, log=print) -> dict:
     """Fetch the model list. Without quote_videos the prices of `previous` are kept."""
-    data = {"fetched": _now(), "quotes_fetched": "", "image": {}, "video": {}}
-    for kind in ("image", "video"):
-        for m in api.get_json(f"/models?type={kind}").get("data", []):
+    data = {"fetched": _now(), "quotes_fetched": "", **{kind: {} for kind in KINDS}}
+    for kind, venice_type in KINDS.items():
+        for m in api.get_json(f"/models?type={venice_type}").get("data", []):
             data[kind][m["id"]] = _entry(m)
     old = (previous or {}).get("video", {})
     for e in data["video"].values():
@@ -187,13 +200,14 @@ def start_background_refresh() -> None:
     def run():
         try:
             current = catalog()
-            if _age_hours(current.get("fetched", "")) < MODELS_MAX_AGE_HOURS:
+            if (_age_hours(current.get("fetched", "")) < MODELS_MAX_AGE_HOURS
+                    and all(current.get(kind) for kind in KINDS)):
                 return
             quotes = _age_hours(current.get("quotes_fetched", "")) >= QUOTES_MAX_AGE_HOURS
             data = fetch_catalog(quote_videos=quotes, previous=current)
             save(data, _cache_path())
             _set_catalog(data)
-            print(f"{api.LOG} model list updated: {len(data['image'])} image, "
+            print(f"{api.LOG} model list updated: {len(data['image'])} image, {len(data['edit'])} edit, "
                   f"{len(data['video'])} video models"
                   + (", video prices refreshed" if quotes else "")
                   + " (reload the browser tab to see the changes)")
@@ -245,21 +259,43 @@ def _usd(v: float) -> str:
     return f"${v:.3f}".rstrip("0") if v < 0.1 else f"${v:.2f}"
 
 
-def image_price(e: dict, resolution: str = "", quality: str = "") -> float:
+def image_price(e: dict, resolution: str = "", quality: str = "", input_images: int = 0) -> float:
+    """Price of one image (generate or edit). Edits may add a fee per extra input image."""
     p = e.get("pricing") or {}
     q = (p.get("quality") or {}).get(resolution) or {}
     if quality in q:
-        return q[quality]["usd"]
-    if resolution in (p.get("resolutions") or {}):
-        return p["resolutions"][resolution]["usd"]
-    if p.get("resolutions"):
-        return next(iter(p["resolutions"].values()))["usd"]
-    return (p.get("generation") or {}).get("usd", 0.0)
+        price = q[quality]["usd"]
+    elif resolution in (p.get("resolutions") or {}):
+        price = p["resolutions"][resolution]["usd"]
+    elif p.get("resolutions"):
+        price = next(iter(p["resolutions"].values()))["usd"]
+    else:
+        price = (p.get("generation") or p.get("inpaint") or {}).get("usd", 0.0)
+    extra = p.get("inputImages") or {}
+    if input_images and extra.get("additional"):
+        price += extra["additional"]["usd"] * max(0, input_images - int(extra.get("included", 0)))
+    return price
+
+
+def end_date(e: dict) -> str:
+    """YYYY-MM-DD when Venice removes the model, else ''."""
+    dep = e.get("deprecation") or {}
+    return str(dep.get("removesAt") or dep.get("date") or "")[:10]
+
+
+def edit_max_images(e: dict) -> int:
+    """0 = the model combines images but Venice does not state a limit."""
+    c = e["constraints"]
+    if not c.get("combineImages"):
+        return 1
+    return int(c.get("maxInputImages") or 0)
 
 
 def _price_text(kind: str, e: dict) -> str:
-    if kind == "image":
-        tiered = len((e.get("pricing") or {}).get("resolutions") or {}) > 1
+    if kind in ("image", "edit"):
+        p = e.get("pricing") or {}
+        tier_prices = {v.get("usd") for v in (p.get("resolutions") or {}).values()}
+        tiered = len(tier_prices) > 1 or bool((p.get("inputImages") or {}).get("additional"))
         return _usd(image_price(e)) + ("+" if tiered else "")
     q = e.get("quote") or {}
     if q.get("usd") is None:
@@ -271,16 +307,22 @@ def label(kind: str, e: dict, fav: bool) -> str:
     parts = [e["name"]]
     if kind == "video":
         parts.append(video_kind(e))
+    elif kind == "edit":
+        n = edit_max_images(e)
+        parts.append("1 img" if n == 1 else f"max {n} img" if n else "multi img")
     parts.append(_price_text(kind, e))
     parts.append("UNCENSORED" if e["uncensored"] else "censored")
     if e["privacy"] == "private":
         parts.append("private")
+    ends = end_date(e)
+    if ends:
+        parts.append(f"ENDS {ends}")
     parts.append(e["id"])
     return (STAR if fav else "") + SEP.join(parts)
 
 
 def labels(kind: str) -> list:
-    models = {k: v for k, v in catalog()[kind].items() if not v.get("offline")}
+    models = {k: v for k, v in catalog().get(kind, {}).items() if not v.get("offline")}
     favs = [i for i in favourites() if i in models]
     rest = sorted((m for i, m in models.items() if i not in favs),
                   key=lambda m: (m["name"].lower(), KIND_ORDER.get(video_kind(m), 9) if kind == "video" else 0))
@@ -294,7 +336,7 @@ def model_id(value: str) -> str:
 
 
 def get(kind: str, value: str):
-    return catalog()[kind].get(model_id(value))
+    return catalog().get(kind, {}).get(model_id(value))
 
 
 # --------------------------------------------------------------------------- #
@@ -302,7 +344,7 @@ def get(kind: str, value: str):
 # --------------------------------------------------------------------------- #
 def _union(kind: str, key: str) -> list:
     seen = []
-    for e in catalog()[kind].values():
+    for e in catalog().get(kind, {}).values():
         for v in e["constraints"].get(key) or []:
             if v not in seen:
                 seen.append(v)
@@ -326,16 +368,16 @@ def _with_auto(values: list, extra: tuple = ()) -> list:
     return ["auto"] + [v for v in values if v not in ("auto", *extra)] + list(extra)
 
 
-def image_aspect_ratios() -> list:
-    return _with_auto(_union("image", "aspectRatios"), ("custom",))
+def image_aspect_ratios(kind: str = "image") -> list:
+    return _with_auto(_union(kind, "aspectRatios"), ("custom",) if kind == "image" else ())
 
 
-def image_resolutions() -> list:
-    return _with_auto(_union("image", "resolutions"))
+def image_resolutions(kind: str = "image") -> list:
+    return _with_auto(_union(kind, "resolutions"))
 
 
-def image_qualities() -> list:
-    return _with_auto(_union("image", "qualities"))
+def image_qualities(kind: str = "image") -> list:
+    return _with_auto(_union(kind, "qualities"))
 
 
 PREVIEW_MAX_HEIGHT = 768
@@ -374,5 +416,6 @@ def browser_payload() -> dict:
     return {
         "fetched": cat.get("fetched", ""),
         "image": {i: e["constraints"] for i, e in cat["image"].items()},
+        "edit": {i: e["constraints"] for i, e in cat.get("edit", {}).items()},
         "video": {i: dict(e["constraints"], kind=video_kind(e)) for i, e in cat["video"].items()},
     }

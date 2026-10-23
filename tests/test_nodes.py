@@ -83,9 +83,10 @@ def _install_stubs():
 _install_stubs()
 sys.path.insert(0, os.path.dirname(PACK))
 pack = __import__(os.path.basename(PACK) + ".venice_ai", fromlist=["api", "catalog", "media", "image_node",
-                                                                     "video_node"])
+                                                                     "edit_node", "video_node", "profiles"])
 api, catalog, media = pack.api, pack.catalog, pack.media
-image_node, video_node = pack.image_node, pack.video_node
+image_node, edit_node, video_node = pack.image_node, pack.edit_node, pack.video_node
+profiles = pack.profiles
 
 
 def _png_b64(w=64, h=32):
@@ -131,6 +132,53 @@ class CatalogTests(unittest.TestCase):
         self.assertIn(" · I2V · $", seed)
         self.assertIn("/5s", seed)
         self.assertIn("$ by input video", _label("video", "minimax-h3-max-recast"))
+
+    def test_label_marks_models_ending_soon(self):
+        e = dict(catalog.catalog()["video"]["seedance-2-5-image-to-video-basic"],
+                 deprecation={"removesAt": "2026-10-28T00:00:00.000Z"})
+        lbl = catalog.label("video", e, False)
+        self.assertIn(" · ENDS 2026-10-28 · seedance-2-5-image-to-video-basic", lbl)
+        self.assertEqual(catalog.model_id(lbl), "seedance-2-5-image-to-video-basic")
+
+    def test_model_docs_generate(self):
+        sys.path.insert(0, os.path.join(PACK, "tools"))
+        import generate_model_docs as g
+        for lang in ("en", "de"):
+            text = g.build(lang, catalog.catalog())
+            self.assertIn("seedance-2-5-image-to-video-basic", text)
+            self.assertIn("qwen-image-2-1-pro-edit", text)
+            self.assertIn("lustify-sdxl", text)
+
+    def test_example_workflows_use_known_nodes_and_models(self):
+        folder = os.path.join(PACK, "example_workflows")
+        files = [f for f in os.listdir(folder) if f.endswith(".json")]
+        self.assertEqual(len(files), 6)
+        for f in files:
+            with open(os.path.join(folder, f), encoding="utf-8") as fh:
+                wf = json.load(fh)
+            kinds = {"VeniceAI_Image": "image", "VeniceAI_ImageEdit": "edit", "VeniceAI_Video": "video"}
+            for node in wf["nodes"]:
+                if node["type"] in ("LoadImage", "LoadVideo"):  # never ship file names from a local input folder
+                    named = node.get("widgets_values_named") or {}
+                    for v in [node["widgets_values"][0], *named.values()]:
+                        self.assertIn(v, ("example.png", "your_video.mp4", "image"), f)
+                if node["type"] in kinds:
+                    label = node["widgets_values"][0]  # model is the first widget
+                    self.assertFalse(label.startswith("★"), f)
+                    self.assertIsNotNone(catalog.get(kinds[node["type"]], label), (f, label))
+
+    def test_model_profiles(self):
+        allp = profiles.all_profiles()
+        for kind in ("image", "edit", "video"):
+            self.assertEqual(set(allp[kind]), set(catalog.catalog()[kind]))
+        seed = allp["video"]["seedance-2-5-image-to-video-basic"]
+        self.assertIn("4–30 s", seed)
+        self.assertIn("seedance_consent", seed)
+        self.assertIn("Input images: up to 10", allp["edit"]["qwen-image-2-1-pro-edit"])
+        self.assertIn("free size", allp["image"]["lustify-sdxl"])
+        e = dict(catalog.catalog()["video"]["seedance-2-5-image-to-video-basic"],
+                 deprecation={"removesAt": "2026-10-28T00:00:00.000Z", "replacementModelId": "x-basic"})
+        self.assertIn("removes this model on 2026-10-28 → use x-basic", profiles.video(e))
 
     def test_old_label_resolves_to_same_model(self):
         old = "★ Seedance 2.5 · I2V · $9.99/5s · censored · seedance-2-5-image-to-video-basic"
@@ -337,11 +385,76 @@ class VideoNodeTests(unittest.TestCase):
         self.assertIn("video_url", self.payload("/video/quote"))
 
 
+class EditNodeTests(unittest.TestCase):
+    def run_node(self, model, image_1, content_type="image/png", **kw):
+        self.sent = {}
+
+        def fake_request(method, path, payload=None, api_key="", timeout=0, accept=""):
+            self.sent.update(path=path, payload=payload)
+            if content_type == "image/png":
+                return api.Response(200, {"Content-Type": "image/png"}, base64.b64decode(_png_b64(80, 40)))
+            body = json.dumps({"images": [_png_b64(80, 40)]}).encode()
+            return api.Response(200, {"Content-Type": "application/json"}, body)
+
+        args = dict(prompt="make it night", aspect_ratio="auto", resolution="auto", quality="auto",
+                    safe_mode=False, transparent_background=False, variation=0, api_key="k")
+        args.update(kw)
+        with mock.patch.object(api, "request", fake_request):
+            return edit_node.VeniceImageEdit().edit(_label("edit", model), image_1, **args)
+
+    def test_labels_show_input_limit(self):
+        self.assertIn(" · max 10 img · $0.05 · ", _label("edit", "qwen-image-2-1-pro-edit"))  # 1K = 2K price
+        self.assertIn(" · 1 img · ", _label("edit", "luma-uni-1-edit"))
+        self.assertIn("UNCENSORED", _label("edit", "qwen-edit-uncensored"))
+        self.assertIn("$0.12+", _label("edit", "flux-2-max-edit"))  # extra input images cost more
+
+    def test_single_image_uses_edit_endpoint(self):
+        out = self.run_node("qwen-edit-uncensored", torch.rand(1, 512, 512, 3))
+        self.assertEqual(self.sent["path"], "/image/edit")
+        p = self.sent["payload"]
+        self.assertEqual(p["model"], "qwen-edit-uncensored")
+        self.assertFalse(p["image"].startswith("data:"))  # plain base64
+        self.assertEqual(p["aspect_ratio"], "auto")
+        self.assertFalse(p["safe_mode"])
+        images, prompt, info = out["result"]
+        self.assertEqual(tuple(images.shape), (1, 40, 80, 3))
+        self.assertIn("1 input image(s)", info)
+
+    def test_two_references_use_multi_edit(self):
+        a, b = torch.rand(1, 512, 512, 3), torch.rand(1, 600, 400, 3)  # different sizes
+        out = self.run_node("seedream-v5-lite-edit", a, image_2=b, content_type="json")
+        self.assertEqual(self.sent["path"], "/image/multi-edit")
+        self.assertEqual(len(self.sent["payload"]["images"]), 2)
+        self.assertEqual(self.sent["payload"]["modelId"], "seedream-v5-lite-edit")  # not "model"
+        self.assertNotIn("model", self.sent["payload"])
+        self.assertIn("2 input image(s)", out["result"][2])
+
+    def test_extra_image_fee_in_price(self):
+        refs = torch.rand(2, 512, 512, 3)
+        out = self.run_node("flux-2-max-edit", torch.rand(1, 512, 512, 3), extra_images=refs)
+        self.assertIn("$0.189", out["result"][2])  # 0.12 + 2 x 0.0345
+
+    def test_quality_goes_to_multi_edit(self):
+        self.run_node("grok-imagine-image-2-0-edit", torch.rand(1, 512, 512, 3), quality="low", resolution="2K")
+        p = self.sent["payload"]
+        self.assertEqual((self.sent["path"], p["quality"], p["resolution"]), ("/image/multi-edit", "low", "2K"))
+
+    def test_too_many_images_stops_before_billing(self):
+        with self.assertRaises(api.VeniceError) as cm:
+            self.run_node("luma-uni-1-edit", torch.rand(1, 512, 512, 3), image_2=torch.rand(1, 512, 512, 3))
+        self.assertIn("at most 1", str(cm.exception))
+        self.assertEqual(self.sent, {})
+
+    def test_too_small_image(self):
+        with self.assertRaises(api.VeniceError):
+            self.run_node("qwen-edit-uncensored", torch.rand(1, 100, 100, 3))
+
+
 class PortedNodesTests(unittest.TestCase):
     def test_package_mappings(self):
         pkg = __import__(os.path.basename(PACK))
         ids = set(pkg.NODE_CLASS_MAPPINGS)
-        self.assertEqual(ids, {"VeniceAI_Image", "VeniceAI_Video", "VeniceAI_VideoSavePlus",
+        self.assertEqual(ids, {"VeniceAI_Image", "VeniceAI_ImageEdit", "VeniceAI_Video", "VeniceAI_VideoSavePlus",
                                "VeniceAI_SaveImagePlusPrompt", "VeniceAI_LoadAndResizeImageWithFilename"})
         for node_id, name in pkg.NODE_DISPLAY_NAME_MAPPINGS.items():
             self.assertTrue(name.startswith("Venice AI · "), name)

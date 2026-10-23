@@ -3,7 +3,7 @@
 import os
 from urllib.parse import quote
 
-from . import catalog
+from . import catalog, profiles
 from .api import LOG
 
 
@@ -22,7 +22,8 @@ def register():
 
     @srv.routes.get("/venice_ai/catalog")
     async def venice_catalog(request):
-        return web.json_response(catalog.browser_payload(), headers={"Cache-Control": "no-store"})
+        data = dict(catalog.browser_payload(), profiles=profiles.all_profiles())
+        return web.json_response(data, headers={"Cache-Control": "no-store"})
 
     from ..ported.load_resize_image_node import EndOfSeries, resolve_folder_image
 

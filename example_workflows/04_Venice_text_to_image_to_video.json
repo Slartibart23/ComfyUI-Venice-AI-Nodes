@@ -1,0 +1,986 @@
+{
+ "id": "0883bbdd-29f2-4e73-bba1-93bd67a56a31",
+ "revision": 0,
+ "last_node_id": 5,
+ "last_link_id": 5,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "VeniceAI_Image",
+   "pos": [
+    460,
+    0
+   ],
+   "size": [
+    380,
+    518
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "COMBO",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "negative_prompt",
+     "name": "negative_prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "negative_prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "aspect_ratio",
+     "name": "aspect_ratio",
+     "type": "COMBO",
+     "widget": {
+      "name": "aspect_ratio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "resolution",
+     "name": "resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "quality",
+     "name": "quality",
+     "type": "COMBO",
+     "widget": {
+      "name": "quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "width",
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "height",
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "steps",
+     "name": "steps",
+     "type": "INT",
+     "widget": {
+      "name": "steps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "cfg_scale",
+     "name": "cfg_scale",
+     "type": "FLOAT",
+     "widget": {
+      "name": "cfg_scale"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "variants",
+     "name": "variants",
+     "type": "INT",
+     "widget": {
+      "name": "variants"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "seed",
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "safe_mode",
+     "name": "safe_mode",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "safe_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "hide_watermark",
+     "name": "hide_watermark",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "hide_watermark"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "api_key",
+     "name": "api_key",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "api_key"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "links": [
+      1,
+      3
+     ]
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "links": [
+      2
+     ]
+    },
+    {
+     "localized_name": "info",
+     "name": "info",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_Image"
+   },
+   "widgets_values": [
+    "Z-Image Turbo · $0.01 · censored · private · z-image-turbo",
+    "A red fox standing in fresh snow at sunrise, soft golden light, cinematic photo",
+    "",
+    "16:9",
+    "auto",
+    "auto",
+    1024,
+    1024,
+    0,
+    0,
+    1,
+    0,
+    "fixed",
+    false,
+    true,
+    ""
+   ],
+   "widgets_values_named": {
+    "model": "Z-Image Turbo · $0.01 · censored · private · z-image-turbo",
+    "prompt": "A red fox standing in fresh snow at sunrise, soft golden light, cinematic photo",
+    "negative_prompt": "",
+    "aspect_ratio": "16:9",
+    "resolution": "auto",
+    "quality": "auto",
+    "width": 1024,
+    "height": 1024,
+    "steps": 0,
+    "cfg_scale": 0,
+    "variants": 1,
+    "seed": 0,
+    "control_after_generate": "fixed",
+    "safe_mode": false,
+    "hide_watermark": true,
+    "api_key": ""
+   }
+  },
+  {
+   "id": 2,
+   "type": "VeniceAI_SaveImagePlusPrompt",
+   "pos": [
+    900,
+    0
+   ],
+   "size": [
+    360,
+    366
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 1
+    },
+    {
+     "localized_name": "prompt_text",
+     "name": "prompt_text",
+     "shape": 7,
+     "type": "STRING",
+     "link": 2
+    },
+    {
+     "localized_name": "custom_path",
+     "name": "custom_path",
+     "type": "STRING",
+     "widget": {
+      "name": "custom_path"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "filename_prefix",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "timestamp",
+     "name": "timestamp",
+     "type": "COMBO",
+     "widget": {
+      "name": "timestamp"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "format",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "quality",
+     "name": "quality",
+     "type": "INT",
+     "widget": {
+      "name": "quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "dpi",
+     "name": "dpi",
+     "type": "INT",
+     "widget": {
+      "name": "dpi"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "meta_data",
+     "name": "meta_data",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "meta_data"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "save_workflow_as_json",
+     "name": "save_workflow_as_json",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_workflow_as_json"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preview",
+     "name": "preview",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "preview"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_SaveImagePlusPrompt"
+   },
+   "widgets_values": [
+    "",
+    "venice_start_image",
+    "None",
+    "jpg",
+    80,
+    300,
+    false,
+    false,
+    true
+   ],
+   "widgets_values_named": {
+    "custom_path": "",
+    "filename_prefix": "venice_start_image",
+    "timestamp": "None",
+    "format": "jpg",
+    "quality": 80,
+    "dpi": 300,
+    "meta_data": false,
+    "save_workflow_as_json": false,
+    "preview": true
+   }
+  },
+  {
+   "id": 3,
+   "type": "VeniceAI_Video",
+   "pos": [
+    900,
+    420
+   ],
+   "size": [
+    400,
+    558
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 3
+    },
+    {
+     "localized_name": "end_image",
+     "name": "end_image",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "reference_images",
+     "name": "reference_images",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "video",
+     "name": "video",
+     "shape": 7,
+     "type": "VIDEO",
+     "link": null
+    },
+    {
+     "localized_name": "audio",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "COMBO",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "negative_prompt",
+     "name": "negative_prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "negative_prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "duration",
+     "name": "duration",
+     "type": "COMBO",
+     "widget": {
+      "name": "duration"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "resolution",
+     "name": "resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "aspect_ratio",
+     "name": "aspect_ratio",
+     "type": "COMBO",
+     "widget": {
+      "name": "aspect_ratio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generate_audio",
+     "name": "generate_audio",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "generate_audio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preview",
+     "name": "preview",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "preview"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "price_only",
+     "name": "price_only",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "price_only"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "max_price_usd",
+     "name": "max_price_usd",
+     "type": "FLOAT",
+     "widget": {
+      "name": "max_price_usd"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "seedance_consent",
+     "name": "seedance_consent",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "seedance_consent"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "keep_raw_copy",
+     "name": "keep_raw_copy",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "keep_raw_copy"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "timeout_minutes",
+     "name": "timeout_minutes",
+     "type": "INT",
+     "widget": {
+      "name": "timeout_minutes"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "variation",
+     "name": "variation",
+     "type": "INT",
+     "widget": {
+      "name": "variation"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "api_key",
+     "name": "api_key",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "api_key"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "video",
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    },
+    {
+     "localized_name": "video_path",
+     "name": "video_path",
+     "type": "STRING",
+     "links": [
+      4
+     ]
+    },
+    {
+     "localized_name": "last_frame",
+     "name": "last_frame",
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "links": [
+      5
+     ]
+    },
+    {
+     "localized_name": "info",
+     "name": "info",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_Video"
+   },
+   "widgets_values": [
+    "MiniMax H3 Max Turbo · I2V · $0.16/5s · UNCENSORED · private · minimax-h3-max-turbo-image-to-video",
+    "The fox turns its head and trots slowly through the snow, gentle camera push-in",
+    "",
+    "5s",
+    "768P",
+    "auto",
+    true,
+    false,
+    false,
+    1,
+    false,
+    true,
+    30,
+    0,
+    "fixed",
+    ""
+   ],
+   "widgets_values_named": {
+    "model": "MiniMax H3 Max Turbo · I2V · $0.16/5s · UNCENSORED · private · minimax-h3-max-turbo-image-to-video",
+    "prompt": "The fox turns its head and trots slowly through the snow, gentle camera push-in",
+    "negative_prompt": "",
+    "duration": "5s",
+    "resolution": "768P",
+    "aspect_ratio": "auto",
+    "generate_audio": true,
+    "preview": false,
+    "price_only": false,
+    "max_price_usd": 1,
+    "seedance_consent": false,
+    "keep_raw_copy": true,
+    "timeout_minutes": 30,
+    "variation": 0,
+    "control_after_generate": "fixed",
+    "api_key": ""
+   }
+  },
+  {
+   "id": 4,
+   "type": "VeniceAI_VideoSavePlus",
+   "pos": [
+    1340,
+    420
+   ],
+   "size": [
+    380,
+    862
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "video",
+     "name": "video",
+     "shape": 7,
+     "type": "VIDEO",
+     "link": null
+    },
+    {
+     "localized_name": "images",
+     "name": "images",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "audio",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "localized_name": "prompt_text",
+     "name": "prompt_text",
+     "shape": 7,
+     "type": "STRING",
+     "link": 5
+    },
+    {
+     "localized_name": "seed",
+     "name": "seed",
+     "shape": 7,
+     "type": "INT",
+     "link": null
+    },
+    {
+     "localized_name": "filename_prefix",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "custom_output_path",
+     "name": "custom_output_path",
+     "type": "STRING",
+     "widget": {
+      "name": "custom_output_path"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "frame_rate",
+     "name": "frame_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "frame_rate"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "video_codec",
+     "name": "video_codec",
+     "type": "COMBO",
+     "widget": {
+      "name": "video_codec"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "crf",
+     "name": "crf",
+     "type": "INT",
+     "widget": {
+      "name": "crf"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preset",
+     "name": "preset",
+     "type": "COMBO",
+     "widget": {
+      "name": "preset"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "pixel_format",
+     "name": "pixel_format",
+     "type": "COMBO",
+     "widget": {
+      "name": "pixel_format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "audio_bitrate",
+     "name": "audio_bitrate",
+     "type": "INT",
+     "widget": {
+      "name": "audio_bitrate"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "save_workflow_png",
+     "name": "save_workflow_png",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_workflow_png"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "save_workflow_json",
+     "name": "save_workflow_json",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_workflow_json"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "png_compression",
+     "name": "png_compression",
+     "type": "INT",
+     "widget": {
+      "name": "png_compression"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "save_frame",
+     "name": "save_frame",
+     "type": "COMBO",
+     "widget": {
+      "name": "save_frame"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "frame_format",
+     "name": "frame_format",
+     "type": "COMBO",
+     "widget": {
+      "name": "frame_format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "frame_quality",
+     "name": "frame_quality",
+     "type": "INT",
+     "widget": {
+      "name": "frame_quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "copy_to_folder",
+     "name": "copy_to_folder",
+     "type": "STRING",
+     "widget": {
+      "name": "copy_to_folder"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "source_video_path",
+     "name": "source_video_path",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "source_video_path"
+     },
+     "link": 4
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "filepath",
+     "name": "filepath",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_VideoSavePlus"
+   },
+   "widgets_values": [
+    "venice_video",
+    "",
+    24,
+    "h264",
+    19,
+    "medium",
+    "yuv420p",
+    192,
+    true,
+    false,
+    4,
+    "none",
+    "jpg",
+    95,
+    "",
+    "",
+    null,
+    null,
+    null,
+    null,
+    null,
+    ""
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "venice_video",
+    "custom_output_path": "",
+    "frame_rate": 24,
+    "video_codec": "h264",
+    "crf": 19,
+    "preset": "medium",
+    "pixel_format": "yuv420p",
+    "audio_bitrate": 192,
+    "save_workflow_png": true,
+    "save_workflow_json": false,
+    "png_compression": 4,
+    "save_frame": "none",
+    "frame_format": "jpg",
+    "frame_quality": 95,
+    "copy_to_folder": "",
+    "source_video_path": "",
+    "📂 Reveal in file manager": null,
+    "▶ Open video (with sound)": null,
+    "🖼 Save Last Frame": null,
+    "💾 Save Training File": null,
+    "🗑 Delete Last Generation": null,
+    "vsp_status": ""
+   }
+  },
+  {
+   "id": 5,
+   "type": "MarkdownNote",
+   "pos": [
+    0,
+    0
+   ],
+   "size": [
+    420,
+    520
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## Venice AI · Text → image → video\n\nThe image from **Venice AI · Image** is the start image of **Venice AI · Video**. Both prompts are saved as `.txt`.\n\n* Keep **seed** fixed while you tune the video prompt: ComfyUI then reuses the cached image and only the video is generated (and billed) again.\n* Try **preview** first, then switch it off for the full run.\n* Short side of the start image ≥ 300 px for Seedance (checked before sending).\n\n[MODELS.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.md)\n\n🇩🇪 Bild erzeugen und direkt als Startbild für das Video nutzen. **seed** fest lassen, dann wird nur das Video neu berechnet.\n\n**API key:** put your Venice key into `Venice_AI_API.txt` in the ComfyUI folder (one line). Every run is billed to your Venice account.\n\n🇩🇪 Key in `Venice_AI_API.txt` im ComfyUI-Ordner. Jeder Lauf kostet Venice-Guthaben."
+   ],
+   "widgets_values_named": {
+    "text": "## Venice AI · Text → image → video\n\nThe image from **Venice AI · Image** is the start image of **Venice AI · Video**. Both prompts are saved as `.txt`.\n\n* Keep **seed** fixed while you tune the video prompt: ComfyUI then reuses the cached image and only the video is generated (and billed) again.\n* Try **preview** first, then switch it off for the full run.\n* Short side of the start image ≥ 300 px for Seedance (checked before sending).\n\n[MODELS.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.md)\n\n🇩🇪 Bild erzeugen und direkt als Startbild für das Video nutzen. **seed** fest lassen, dann wird nur das Video neu berechnet.\n\n**API key:** put your Venice key into `Venice_AI_API.txt` in the ComfyUI folder (one line). Every run is billed to your Venice account.\n\n🇩🇪 Key in `Venice_AI_API.txt` im ComfyUI-Ordner. Jeder Lauf kostet Venice-Guthaben."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   2,
+   0,
+   "IMAGE"
+  ],
+  [
+   2,
+   1,
+   1,
+   2,
+   1,
+   "STRING"
+  ],
+  [
+   3,
+   1,
+   0,
+   3,
+   0,
+   "IMAGE"
+  ],
+  [
+   4,
+   3,
+   1,
+   4,
+   20,
+   "STRING"
+  ],
+  [
+   5,
+   3,
+   3,
+   4,
+   3,
+   "STRING"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ue_links": [],
+  "ds": {
+   "scale": 1,
+   "offset": [
+    0,
+    0
+   ]
+  }
+ },
+ "version": 0.4
+}

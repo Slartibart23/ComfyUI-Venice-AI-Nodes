@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-23T13:54:38+00:00",
+ "fetched": "2026-10-23T15:18:21+00:00",
  "quotes_fetched": "2026-10-23T13:56:12+00:00",
  "image": {
   "venice-sd35": {
@@ -31,7 +31,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [
+    "eliza-default"
+   ],
+   "source": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "grok-imagine-image-2-0": {
    "id": "grok-imagine-image-2-0",
@@ -109,7 +117,16 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "grok-imagine-image-quality": {
    "id": "grok-imagine-image-quality",
@@ -160,7 +177,16 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "krea-2-turbo": {
    "id": "krea-2-turbo",
@@ -213,7 +239,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/krea/Krea-2-Turbo",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "flux-2-pro": {
    "id": "flux-2-pro",
@@ -255,7 +289,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "flux-2-max": {
    "id": "flux-2-max",
@@ -298,7 +338,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "flux-3-image": {
    "id": "flux-3-image",
@@ -356,7 +404,16 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "gpt-image-2-5-flare": {
    "id": "gpt-image-2-5-flare",
@@ -465,7 +522,16 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "gpt-image-2-5-sunburst": {
    "id": "gpt-image-2-5-sunburst",
@@ -574,7 +640,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "gpt-image-2": {
    "id": "gpt-image-2",
@@ -682,7 +756,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "gpt-image-1-5": {
    "id": "gpt-image-1-5",
@@ -720,7 +802,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "hunyuan-image-v3": {
    "id": "hunyuan-image-v3",
@@ -762,7 +850,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://huggingface.co/tencent/HunyuanImage-3.0-Instruct",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "ideogram-v4": {
    "id": "ideogram-v4",
@@ -804,7 +898,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "ideogram-v4-5": {
    "id": "ideogram-v4-5",
@@ -892,7 +992,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "imagineart-1.5-pro": {
    "id": "imagineart-1.5-pro",
@@ -933,7 +1039,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "krea-v2-large": {
    "id": "krea-v2-large",
@@ -974,7 +1086,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": true,
+   "deprecation": null
   },
   "krea-v2-medium": {
    "id": "krea-v2-medium",
@@ -1015,7 +1133,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": true,
+   "deprecation": null
   },
   "luma-uni-1": {
    "id": "luma-uni-1",
@@ -1056,7 +1180,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": true,
+   "deprecation": null
   },
   "luma-uni-1-max": {
    "id": "luma-uni-1-max",
@@ -1097,7 +1227,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": true,
+   "deprecation": null
   },
   "muse-image": {
    "id": "muse-image",
@@ -1138,7 +1276,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "nano-banana-2": {
    "id": "nano-banana-2",
@@ -1196,7 +1340,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": true,
+   "style_references": false,
+   "deprecation": null
   },
   "nano-banana-2-1": {
    "id": "nano-banana-2-1",
@@ -1254,7 +1406,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": true,
+   "style_references": false,
+   "deprecation": null
   },
   "nano-banana-pro": {
    "id": "nano-banana-pro",
@@ -1312,7 +1470,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": true,
+   "style_references": false,
+   "deprecation": null
   },
   "nano-banana-2-lite": {
    "id": "nano-banana-2-lite",
@@ -1354,7 +1520,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "recraft-v4": {
    "id": "recraft-v4",
@@ -1396,7 +1570,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "recraft-v4-pro": {
    "id": "recraft-v4-pro",
@@ -1438,7 +1618,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "seedream-v4": {
    "id": "seedream-v4",
@@ -1480,7 +1666,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "seedream-v5-lite": {
    "id": "seedream-v5-lite",
@@ -1523,7 +1715,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "seedream-v5-pro": {
    "id": "seedream-v5-pro",
@@ -1575,7 +1773,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image-2": {
    "id": "qwen-image-2",
@@ -1617,7 +1823,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image-2-pro": {
    "id": "qwen-image-2-pro",
@@ -1659,7 +1871,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "wan-2-7-text-to-image": {
    "id": "wan-2-7-text-to-image",
@@ -1701,7 +1921,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "wan-2-7-pro-text-to-image": {
    "id": "wan-2-7-pro-text-to-image",
@@ -1743,7 +1969,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "grok-imagine-image": {
    "id": "grok-imagine-image",
@@ -1794,7 +2026,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "lustify-sdxl": {
    "id": "lustify-sdxl",
@@ -1825,7 +2063,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://civitai.com/models/573152/lustify-sdxl-nsfw-checkpoint",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "lustify-v7": {
    "id": "lustify-v7",
@@ -1856,7 +2100,17 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [
+    "most_uncensored"
+   ],
+   "source": "https://civitai.com/models/573152/lustify-sdxl-nsfw-checkpoint",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "lustify-v8": {
    "id": "lustify-v8",
@@ -1887,7 +2141,17 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [
+    "most_uncensored"
+   ],
+   "source": "https://civitai.com/models/573152/lustify-sdxl-nsfw-checkpoint",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image": {
    "id": "qwen-image",
@@ -1929,7 +2193,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [
+    "highest_quality"
+   ],
+   "source": "https://huggingface.co/Qwen/Qwen-Image",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "wai-Illustrious": {
    "id": "wai-Illustrious",
@@ -1960,7 +2232,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "https://civitai.com/models/827184?modelVersionId=1761560",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "z-image-turbo": {
    "id": "z-image-turbo",
@@ -1991,7 +2271,18 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [
+    "default",
+    "fastest"
+   ],
+   "source": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "chroma": {
    "id": "chroma",
@@ -2022,7 +2313,16 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/lodestones/Chroma1-HD",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image-3": {
    "id": "qwen-image-3",
@@ -2075,7 +2375,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image-3-pro": {
    "id": "qwen-image-3-pro",
@@ -2128,7 +2436,15 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image-2-1-turbo": {
    "id": "qwen-image-2-1-turbo",
@@ -2181,7 +2497,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   },
   "qwen-image-2-1-pro": {
    "id": "qwen-image-2-1-pro",
@@ -2234,7 +2556,13 @@
       "diem": 0.08
      }
     }
-   }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   }
  },
  "video": {
@@ -2269,6 +2597,19 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "high_resolution",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.47,
     "duration": "4s",
@@ -2304,6 +2645,19 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "high_resolution",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.47,
     "duration": "4s",
@@ -2341,6 +2695,19 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "high_resolution",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.47,
     "duration": "4s",
@@ -2373,6 +2740,19 @@
     "video_input": true
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "high_resolution",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "seedance-1-5-pro-text-to-video-basic": {
@@ -2415,6 +2795,24 @@
     "prompt_character_limit": 3500
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": {
+    "autoRemap": false,
+    "date": "2026-11-10T00:00:00.000Z",
+    "removesAt": "2026-11-10T00:00:00.000Z",
+    "replacementModelId": "seedance-2-0-mini-text-to-video-basic"
+   },
    "quote": {
     "usd": 0.16,
     "duration": "5s",
@@ -2459,6 +2857,24 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": {
+    "autoRemap": false,
+    "date": "2026-11-10T00:00:00.000Z",
+    "removesAt": "2026-11-10T00:00:00.000Z",
+    "replacementModelId": "seedance-2-0-mini-image-to-video-basic"
+   },
    "quote": {
     "usd": 0.21,
     "duration": "5s",
@@ -2510,6 +2926,19 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.95,
     "duration": "5s",
@@ -2558,6 +2987,19 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.95,
     "duration": "5s",
@@ -2612,6 +3054,19 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.95,
     "duration": "5s",
@@ -2662,6 +3117,17 @@
     "prompt_character_limit": 3500
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.76,
     "duration": "5s",
@@ -2708,6 +3174,17 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.76,
     "duration": "5s",
@@ -2760,6 +3237,17 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.76,
     "duration": "5s",
@@ -2810,6 +3298,17 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.47,
     "duration": "5s",
@@ -2856,6 +3355,17 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.47,
     "duration": "5s",
@@ -2908,6 +3418,17 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.47,
     "duration": "5s",
@@ -2974,6 +3495,18 @@
     "prompt_character_limit": 15000
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.44,
     "duration": "5s",
@@ -3036,6 +3569,18 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.44,
     "duration": "5s",
@@ -3104,6 +3649,18 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.44,
     "duration": "5s",
@@ -3171,6 +3728,23 @@
     "prompt_character_limit": 15000
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": {
+    "autoRemap": false,
+    "date": "2026-10-28T00:00:00.000Z",
+    "removesAt": "2026-10-28T00:00:00.000Z",
+    "replacementModelId": "seedance-2-5-text-to-video-basic"
+   },
    "quote": {
     "usd": 3.12,
     "duration": "5s",
@@ -3233,6 +3807,23 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": {
+    "autoRemap": false,
+    "date": "2026-10-28T00:00:00.000Z",
+    "removesAt": "2026-10-28T00:00:00.000Z",
+    "replacementModelId": "seedance-2-5-image-to-video-basic"
+   },
    "quote": {
     "usd": 3.12,
     "duration": "5s",
@@ -3302,6 +3893,23 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": {
+    "autoRemap": false,
+    "date": "2026-10-28T00:00:00.000Z",
+    "removesAt": "2026-10-28T00:00:00.000Z",
+    "replacementModelId": "seedance-2-5-reference-to-video-basic"
+   },
    "quote": {
     "usd": 3.05,
     "duration": "5s",
@@ -3347,6 +3955,17 @@
     "prompt_character_limit": 20000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.65,
     "duration": "5s",
@@ -3394,6 +4013,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.65,
     "duration": "5s",
@@ -3441,6 +4071,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.65,
     "duration": "5s",
@@ -3486,6 +4127,17 @@
     "prompt_character_limit": 20000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.91,
     "duration": "5s",
@@ -3533,6 +4185,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.91,
     "duration": "5s",
@@ -3580,6 +4243,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.91,
     "duration": "5s",
@@ -3625,6 +4299,17 @@
     "prompt_character_limit": 20000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.18,
     "duration": "5s",
@@ -3672,6 +4357,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.18,
     "duration": "5s",
@@ -3719,6 +4415,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.18,
     "duration": "5s",
@@ -3764,6 +4471,17 @@
     "prompt_character_limit": 20000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.66,
     "duration": "5s",
@@ -3811,6 +4529,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.66,
     "duration": "5s",
@@ -3858,6 +4587,17 @@
     "reference_image_min_short_side_pixels": 240
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 1.66,
     "duration": "5s",
@@ -3895,6 +4635,20 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source",
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -3927,6 +4681,19 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -3957,6 +4724,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "open_source",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -3986,6 +4765,17 @@
     "video_input": true
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "open_source",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "wan-2-7-enhanced-image-to-video": {
@@ -4013,6 +4803,19 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.64,
     "duration": "5s",
@@ -4048,6 +4851,19 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.64,
     "duration": "5s",
@@ -4079,6 +4895,15 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.4,
     "duration": "5s",
@@ -4130,6 +4955,14 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -4173,6 +5006,14 @@
     "reference_image_min_short_side_pixels": 300
    },
    "pricing": {},
+   "sets": [
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -4225,6 +5066,14 @@
     "reference_image_min_short_side_pixels": 400
    },
    "pricing": {},
+   "sets": [
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -4271,6 +5120,15 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -4314,6 +5172,14 @@
     "reference_image_min_short_side_pixels": 300
    },
    "pricing": {},
+   "sets": [
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -4362,6 +5228,14 @@
     "reference_image_min_short_side_pixels": 400
    },
    "pricing": {},
+   "sets": [
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -4393,6 +5267,14 @@
     "reference_image_min_short_side_pixels": 300
    },
    "pricing": {},
+   "sets": [
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "wan-2.6-image-to-video": {
@@ -4420,6 +5302,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -4452,6 +5346,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.28,
     "duration": "5s",
@@ -4487,6 +5393,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -4520,6 +5438,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -4555,6 +5484,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "5s",
@@ -4608,6 +5548,16 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.44,
     "duration": "5s",
@@ -4653,6 +5603,16 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.44,
     "duration": "5s",
@@ -4700,6 +5660,14 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.44,
     "duration": "5s",
@@ -4733,6 +5701,17 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "grok-imagine-1-5-text-to-video-private": {
@@ -4782,6 +5761,19 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic",
+    "high_resolution",
+    "venice_recommendations",
+    "featured"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.81,
     "duration": "5s",
@@ -4828,6 +5820,18 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic",
+    "high_resolution",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.82,
     "duration": "5s",
@@ -4880,6 +5884,17 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.82,
     "duration": "5s",
@@ -4934,6 +5949,17 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic",
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.18,
     "duration": "5s",
@@ -4980,6 +6006,17 @@
     "prompt_character_limit": 4096
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "photorealistic",
+    "high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.19,
     "duration": "5s",
@@ -5020,6 +6057,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.3",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.4,
     "duration": "6s",
@@ -5062,6 +6110,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.3",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.4,
     "duration": "6s",
@@ -5099,6 +6158,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.3",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.53,
     "duration": "6s",
@@ -5136,6 +6206,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.3",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.53,
     "duration": "6s",
@@ -5180,6 +6261,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.5",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.59,
     "duration": "6s",
@@ -5223,6 +6316,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.5",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.59,
     "duration": "6s",
@@ -5260,6 +6365,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.5",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.79,
     "duration": "6s",
@@ -5296,6 +6411,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/Lightricks/LTX-2.5",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.79,
     "duration": "6s",
@@ -5324,6 +6449,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/chetwinlow1/Ovi",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.22,
     "duration": "5s"
@@ -5371,6 +6506,21 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "venice_recommendations",
+    "fast"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.31,
     "duration": "5s",
@@ -5413,6 +6563,21 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "venice_recommendations",
+    "fast"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.31,
     "duration": "5s",
@@ -5454,6 +6619,19 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "audio",
+    "fast"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.31,
     "duration": "5s",
@@ -5506,6 +6684,21 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "venice_recommendations",
+    "fast"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.48,
     "duration": "5s",
@@ -5540,6 +6733,18 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "minimax-h3-max-turbo-text-to-video": {
@@ -5584,6 +6789,20 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "fast"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.16,
     "duration": "5s",
@@ -5626,6 +6845,20 @@
     "prompt_character_limit": 10000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic",
+    "fast"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.16,
     "duration": "5s",
@@ -5657,6 +6890,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.39,
     "duration": "5s",
@@ -5685,6 +6928,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.39,
     "duration": "5s",
@@ -5716,6 +6969,15 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.39,
     "duration": "5s",
@@ -5743,6 +7005,15 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.39,
     "duration": "5s"
@@ -5784,6 +7055,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 2.31,
     "duration": "5s",
@@ -5823,6 +7106,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 2.31,
     "duration": "5s",
@@ -5865,6 +7160,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "long_duration",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 2.31,
     "duration": "5s",
@@ -5904,6 +7210,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "long_duration",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 2.31,
     "duration": "5s",
@@ -5946,6 +7263,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "long_duration",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 2.31,
     "duration": "5s",
@@ -5989,6 +7317,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s",
@@ -6028,6 +7368,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s",
@@ -6070,6 +7422,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s",
@@ -6113,6 +7476,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.46,
     "duration": "5s",
@@ -6152,6 +7526,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.46,
     "duration": "5s",
@@ -6194,6 +7579,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.46,
     "duration": "5s",
@@ -6221,6 +7617,16 @@
     "video_input": true
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "kling-v3-pro-text-to-video": {
@@ -6259,6 +7665,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s",
@@ -6298,6 +7715,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s",
@@ -6324,6 +7752,16 @@
     "video_input": true
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "kling-v3-standard-text-to-video": {
@@ -6362,6 +7800,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.46,
     "duration": "5s",
@@ -6401,6 +7850,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.46,
     "duration": "5s",
@@ -6443,6 +7903,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s",
@@ -6481,6 +7952,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.77,
     "duration": "5s"
@@ -6522,6 +8004,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s",
@@ -6560,6 +8053,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "audio",
+    "photorealistic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.62,
     "duration": "5s"
@@ -6591,6 +8095,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/meituan-longcat/LongCat-Video",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.09,
     "duration": "5s",
@@ -6627,6 +8141,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/meituan-longcat/LongCat-Video",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.09,
     "duration": "5s",
@@ -6660,6 +8184,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/meituan-longcat/LongCat-Video",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.25,
     "duration": "5s",
@@ -6696,6 +8230,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "long_duration",
+    "open_source"
+   ],
+   "traits": [],
+   "source": "https://huggingface.co/meituan-longcat/LongCat-Video",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.25,
     "duration": "5s",
@@ -6732,6 +8276,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.44,
     "duration": "4s",
@@ -6766,6 +8322,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.44,
     "duration": "4s",
@@ -6802,6 +8370,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.88,
     "duration": "4s",
@@ -6836,6 +8416,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.88,
     "duration": "4s",
@@ -6869,6 +8461,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.55,
     "duration": "4s",
@@ -6901,6 +8504,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.57,
     "duration": "4s",
@@ -6933,6 +8547,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.57,
     "duration": "4s",
@@ -6976,6 +8601,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.94,
     "duration": "5s",
@@ -7020,6 +8656,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.94,
     "duration": "5s",
@@ -7064,6 +8711,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.94,
     "duration": "5s",
@@ -7108,6 +8766,17 @@
     "video_input": true
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution",
+    "audio",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "flux-3-max-text-to-video": {
@@ -7157,6 +8826,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.32,
     "duration": "5s",
@@ -7211,6 +8892,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "audio",
+    "high_resolution",
+    "long_duration",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.32,
     "duration": "5s",
@@ -7250,6 +8943,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.57,
     "duration": "5s",
@@ -7284,6 +8987,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.57,
     "duration": "5s",
@@ -7323,6 +9036,16 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.57,
     "duration": "5s",
@@ -7369,6 +9092,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.28,
     "duration": "5s",
@@ -7406,6 +9140,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.28,
     "duration": "5s",
@@ -7451,6 +9196,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.28,
     "duration": "5s",
@@ -7497,6 +9253,17 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "cinematic",
+    "long_duration"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.28,
     "duration": "5s",
@@ -7542,6 +9309,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.97,
     "duration": "5s",
@@ -7581,6 +9360,18 @@
     "video_input": false
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "audio",
+    "long_duration",
+    "cinematic",
+    "venice_recommendations"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.97,
     "duration": "5s",
@@ -7624,6 +9415,15 @@
     "prompt_character_limit": 1000
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.81,
     "duration": "5s",
@@ -7662,6 +9462,15 @@
     "prompt_character_limit": 1000
    },
    "pricing": {},
+   "sets": [
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.81,
     "duration": "5s",
@@ -7704,6 +9513,16 @@
     "prompt_character_limit": 1000
    },
    "pricing": {},
+   "sets": [
+    "fast",
+    "cinematic",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.34,
     "duration": "5s",
@@ -7733,6 +9552,15 @@
     "video_input": true
    },
    "pricing": {},
+   "sets": [
+    "high_resolution",
+    "ultra_high_resolution"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": null
   },
   "minimax-h3-enhanced-text-to-video": {
@@ -7776,6 +9604,17 @@
     "prompt_character_limit": 7000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.5,
     "duration": "5s",
@@ -7827,6 +9666,17 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.5,
     "duration": "5s",
@@ -7875,6 +9725,17 @@
     "prompt_character_limit": 7000
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.5,
     "duration": "5s",
@@ -7919,6 +9780,17 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.5,
     "duration": "5s",
@@ -7969,12 +9841,1607 @@
     "reference_image_max_aspect_ratio": 2.5
    },
    "pricing": {},
+   "sets": [
+    "uncensored",
+    "audio",
+    "high_resolution",
+    "photorealistic"
+   ],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null,
    "quote": {
     "usd": 0.5,
     "duration": "5s",
     "resolution": "768P",
     "aspect_ratio": "16:9"
    }
+  }
+ },
+ "edit": {
+  "firered-image-edit": {
+   "id": "firered-image-edit",
+   "name": "FireRed",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 1500,
+    "combineImages": true,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.04,
+     "diem": 0.04
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-edit-uncensored": {
+   "id": "qwen-edit-uncensored",
+   "name": "Qwen Edit Uncensored",
+   "privacy": "private",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 1500,
+    "combineImages": true,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.04,
+     "diem": 0.04
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "grok-imagine-edit": {
+   "id": "grok-imagine-edit",
+   "name": "Grok Imagine",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "16:9",
+     "9:16",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "promptCharacterLimit": 7500,
+    "combineImages": true,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.03,
+     "diem": 0.03
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.03,
+      "diem": 0.03
+     },
+     "2K": {
+      "usd": 0.04,
+      "diem": 0.04
+     }
+    },
+    "inputImages": {
+     "included": 0,
+     "additional": {
+      "usd": 0.0023000000000000004,
+      "diem": 0.0023000000000000004
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "grok-imagine-quality-edit": {
+   "id": "grok-imagine-quality-edit",
+   "name": "Grok Imagine High Quality",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "16:9",
+     "9:16",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "promptCharacterLimit": 7500,
+    "combineImages": true,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.06,
+     "diem": 0.06
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.06,
+      "diem": 0.06
+     },
+     "2K": {
+      "usd": 0.09,
+      "diem": 0.09
+     }
+    },
+    "inputImages": {
+     "included": 0,
+     "additional": {
+      "usd": 0.011500000000000002,
+      "diem": 0.011500000000000002
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "grok-imagine-image-2-0-edit": {
+   "id": "grok-imagine-image-2-0-edit",
+   "name": "Grok Imagine 2.0",
+   "privacy": "private",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "16:9",
+     "9:16",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "promptCharacterLimit": 7500,
+    "combineImages": true,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "defaultQuality": "medium",
+    "qualities": [
+     "low",
+     "medium"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.07,
+     "diem": 0.07
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.07,
+      "diem": 0.07
+     },
+     "2K": {
+      "usd": 0.1,
+      "diem": 0.1
+     }
+    },
+    "inputImages": {
+     "included": 0,
+     "additional": {
+      "usd": 0.011500000000000002,
+      "diem": 0.011500000000000002
+     }
+    },
+    "quality": {
+     "1K": {
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     },
+     "2K": {
+      "low": {
+       "usd": 0.07,
+       "diem": 0.07
+      },
+      "medium": {
+       "usd": 0.1,
+       "diem": 0.1
+      }
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-image-2-edit": {
+   "id": "qwen-image-2-edit",
+   "name": "Qwen Image 2",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.05,
+     "diem": 0.05
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-image-2-pro-edit": {
+   "id": "qwen-image-2-pro-edit",
+   "name": "Qwen Image 2 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.1,
+     "diem": 0.1
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "wan-2-7-pro-edit": {
+   "id": "wan-2-7-pro-edit",
+   "name": "Wan 2.7 Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto"
+    ],
+    "promptCharacterLimit": 5000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.094,
+     "diem": 0.094
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "flux-2-max-edit": {
+   "id": "flux-2-max-edit",
+   "name": "Flux 2 Max",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 3000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.12,
+     "diem": 0.12
+    },
+    "inputImages": {
+     "included": 1,
+     "additional": {
+      "usd": 0.0345,
+      "diem": 0.0345
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "flux-3-image-edit": {
+   "id": "flux-3-image-edit",
+   "name": "Flux 3",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 32000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.12,
+     "diem": 0.12
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.12,
+      "diem": 0.12
+     },
+     "2K": {
+      "usd": 0.29,
+      "diem": 0.29
+     },
+     "4K": {
+      "usd": 0.98,
+      "diem": 0.98
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "gpt-image-2-5-flare-edit": {
+   "id": "gpt-image-2-5-flare-edit",
+   "name": "GPT Image 2.5 Flare",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "supportsTransparentBackground": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.08,
+     "diem": 0.08
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.08,
+      "diem": 0.08
+     },
+     "2K": {
+      "usd": 0.15,
+      "diem": 0.15
+     },
+     "4K": {
+      "usd": 0.24,
+      "diem": 0.24
+     }
+    },
+    "inputImages": {
+     "included": 1,
+     "additional": {
+      "usd": 0.00966,
+      "diem": 0.00966
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.08,
+       "diem": 0.08
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.04,
+       "diem": 0.04
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.15,
+       "diem": 0.15
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.06,
+       "diem": 0.06
+      }
+     },
+     "4K": {
+      "high": {
+       "usd": 0.24,
+       "diem": 0.24
+      },
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.08,
+       "diem": 0.08
+      }
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "gpt-image-2-5-sunburst-edit": {
+   "id": "gpt-image-2-5-sunburst-edit",
+   "name": "GPT Image 2.5 Sunburst",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ],
+    "supportsTransparentBackground": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.08,
+     "diem": 0.08
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.08,
+      "diem": 0.08
+     },
+     "2K": {
+      "usd": 0.15,
+      "diem": 0.15
+     },
+     "4K": {
+      "usd": 0.24,
+      "diem": 0.24
+     }
+    },
+    "inputImages": {
+     "included": 1,
+     "additional": {
+      "usd": 0.00966,
+      "diem": 0.00966
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.08,
+       "diem": 0.08
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.04,
+       "diem": 0.04
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.15,
+       "diem": 0.15
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.06,
+       "diem": 0.06
+      }
+     },
+     "4K": {
+      "high": {
+       "usd": 0.24,
+       "diem": 0.24
+      },
+      "low": {
+       "usd": 0.05,
+       "diem": 0.05
+      },
+      "medium": {
+       "usd": 0.08,
+       "diem": 0.08
+      }
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "gpt-image-2-edit": {
+   "id": "gpt-image-2-edit",
+   "name": "GPT Image 2",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.34,
+     "diem": 0.34
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.34,
+      "diem": 0.34
+     },
+     "2K": {
+      "usd": 0.52,
+      "diem": 0.52
+     },
+     "4K": {
+      "usd": 0.84,
+      "diem": 0.84
+     }
+    },
+    "inputImages": {
+     "included": 1,
+     "additional": {
+      "usd": 0.009200000000000002,
+      "diem": 0.009200000000000002
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.34,
+       "diem": 0.34
+      },
+      "low": {
+       "usd": 0.03,
+       "diem": 0.03
+      },
+      "medium": {
+       "usd": 0.08,
+       "diem": 0.08
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.52,
+       "diem": 0.52
+      },
+      "low": {
+       "usd": 0.03,
+       "diem": 0.03
+      },
+      "medium": {
+       "usd": 0.14,
+       "diem": 0.14
+      }
+     },
+     "4K": {
+      "high": {
+       "usd": 0.84,
+       "diem": 0.84
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.22,
+       "diem": 0.22
+      }
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "gpt-image-1-5-edit": {
+   "id": "gpt-image-1-5-edit",
+   "name": "GPT Image 1.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "2:3"
+    ],
+    "promptCharacterLimit": 5000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "supportsTransparentBackground": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.31,
+     "diem": 0.31
+    },
+    "inputImages": {
+     "included": 1,
+     "additional": {
+      "usd": 0.028060000000000005,
+      "diem": 0.028060000000000005
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "ideogram-v4-5-edit": {
+   "id": "ideogram-v4-5-edit",
+   "name": "Ideogram V4.5",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 5,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ],
+    "defaultQuality": "high",
+    "qualities": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.26,
+     "diem": 0.26
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.26,
+      "diem": 0.26
+     },
+     "2K": {
+      "usd": 0.26,
+      "diem": 0.26
+     }
+    },
+    "quality": {
+     "1K": {
+      "high": {
+       "usd": 0.26,
+       "diem": 0.26
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     },
+     "2K": {
+      "high": {
+       "usd": 0.26,
+       "diem": 0.26
+      },
+      "low": {
+       "usd": 0.04,
+       "diem": 0.04
+      },
+      "medium": {
+       "usd": 0.07,
+       "diem": 0.07
+      }
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "nano-banana-2-edit": {
+   "id": "nano-banana-2-edit",
+   "name": "Nano Banana 2",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 32768,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.1,
+     "diem": 0.1
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.1,
+      "diem": 0.1
+     },
+     "2K": {
+      "usd": 0.14,
+      "diem": 0.14
+     },
+     "4K": {
+      "usd": 0.19,
+      "diem": 0.19
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "nano-banana-2-1-edit": {
+   "id": "nano-banana-2-1-edit",
+   "name": "Nano Banana 2.1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 32768,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.1,
+     "diem": 0.1
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.1,
+      "diem": 0.1
+     },
+     "2K": {
+      "usd": 0.14,
+      "diem": 0.14
+     },
+     "4K": {
+      "usd": 0.19,
+      "diem": 0.19
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "nano-banana-pro-edit": {
+   "id": "nano-banana-pro-edit",
+   "name": "Nano Banana Pro",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 32768,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K",
+     "4K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.18,
+     "diem": 0.18
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.18,
+      "diem": 0.18
+     },
+     "2K": {
+      "usd": 0.23,
+      "diem": 0.23
+     },
+     "4K": {
+      "usd": 0.35,
+      "diem": 0.35
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "nano-banana-2-lite-edit": {
+   "id": "nano-banana-2-lite-edit",
+   "name": "Nano Banana 2 Lite",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.06,
+     "diem": 0.06
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "luma-uni-1-edit": {
+   "id": "luma-uni-1-edit",
+   "name": "Luma Uni-1",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:3",
+     "4:5"
+    ],
+    "promptCharacterLimit": 6000,
+    "combineImages": false,
+    "singleImageAspectRatio": false
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.06,
+     "diem": 0.06
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "luma-uni-1-max-edit": {
+   "id": "luma-uni-1-max-edit",
+   "name": "Luma Uni-1 Max",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:3",
+     "4:5"
+    ],
+    "promptCharacterLimit": 6000,
+    "combineImages": false,
+    "singleImageAspectRatio": false
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.13,
+     "diem": 0.13
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "muse-image-edit": {
+   "id": "muse-image-edit",
+   "name": "Muse Image",
+   "privacy": "anonymized",
+   "uncensored": false,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.02,
+     "diem": 0.02
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "seedream-v5-lite-edit": {
+   "id": "seedream-v5-lite-edit",
+   "name": "Seedream V5 Lite",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5",
+     "4:3"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.05,
+     "diem": 0.05
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "seedream-v5-pro-edit": {
+   "id": "seedream-v5-pro-edit",
+   "name": "Seedream V5 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:3"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.06,
+     "diem": 0.06
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.06,
+      "diem": 0.06
+     },
+     "2K": {
+      "usd": 0.11,
+      "diem": 0.11
+     }
+    },
+    "inputImages": {
+     "included": 1,
+     "additional": {
+      "usd": 0.0034500000000000004,
+      "diem": 0.0034500000000000004
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "seedream-v4-edit": {
+   "id": "seedream-v4-edit",
+   "name": "Seedream V4.5",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.05,
+     "diem": 0.05
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-image-3-edit": {
+   "id": "qwen-image-3-edit",
+   "name": "Qwen Image 3",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.04,
+     "diem": 0.04
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.04,
+      "diem": 0.04
+     },
+     "2K": {
+      "usd": 0.04,
+      "diem": 0.04
+     }
+    },
+    "inputImages": {
+     "included": 0,
+     "additional": {
+      "usd": 0.0034500000000000004,
+      "diem": 0.0034500000000000004
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-image-3-pro-edit": {
+   "id": "qwen-image-3-pro-edit",
+   "name": "Qwen Image 3 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.05,
+      "diem": 0.05
+     },
+     "2K": {
+      "usd": 0.09,
+      "diem": 0.09
+     }
+    },
+    "inputImages": {
+     "included": 0,
+     "additional": {
+      "usd": 0.0034500000000000004,
+      "diem": 0.0034500000000000004
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-image-2-1-turbo-edit": {
+   "id": "qwen-image-2-1-turbo-edit",
+   "name": "Qwen Image 2.1 Turbo",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 6,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.02,
+     "diem": 0.02
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.02,
+      "diem": 0.02
+     },
+     "2K": {
+      "usd": 0.02,
+      "diem": 0.02
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
+  },
+  "qwen-image-2-1-pro-edit": {
+   "id": "qwen-image-2-1-pro-edit",
+   "name": "Qwen Image 2.1 Pro",
+   "privacy": "anonymized",
+   "uncensored": true,
+   "offline": false,
+   "constraints": {
+    "aspectRatios": [
+     "auto",
+     "1:1",
+     "3:2",
+     "16:9",
+     "21:9",
+     "9:16",
+     "2:3",
+     "3:4",
+     "4:5"
+    ],
+    "promptCharacterLimit": 10000,
+    "combineImages": true,
+    "maxInputImages": 10,
+    "singleImageAspectRatio": true,
+    "defaultResolution": "1K",
+    "resolutions": [
+     "1K",
+     "2K"
+    ]
+   },
+   "pricing": {
+    "inpaint": {
+     "usd": 0.05,
+     "diem": 0.05
+    },
+    "resolutions": {
+     "1K": {
+      "usd": 0.05,
+      "diem": 0.05
+     },
+     "2K": {
+      "usd": 0.05,
+      "diem": 0.05
+     }
+    }
+   },
+   "sets": [],
+   "traits": [],
+   "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+   "web_search": false,
+   "style_references": false,
+   "deprecation": null
   }
  }
 }

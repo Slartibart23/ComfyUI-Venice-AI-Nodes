@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-venice-ai-nodes"
-description = "Unofficial Venice AI API nodes: every Venice image and video model (prices and censored/uncensored in the model list, per-model durations/resolutions, cheap preview runs, price limit) plus Video Save Plus, Save Image + Prompt TXT and Load & Resize Image + Filename. Needs your own Venice API key. Not affiliated with Venice.ai."
-version = "1.0.0"
+description = "Unofficial Venice AI API nodes: every Venice image, image edit (one image or up to 10 references) and video model (prices and censored/uncensored in the model list, per-model durations/resolutions, cheap preview runs, price limit) plus Video Save Plus, Save Image + Prompt TXT and Load & Resize Image + Filename. Needs your own Venice API key. Not affiliated with Venice.ai."
+version = "1.1.0"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
 dependencies = []

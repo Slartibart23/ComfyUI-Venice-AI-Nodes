@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.1.0
+- New: **Venice AI · Image Edit**: every Venice edit model (29 today); one image → edit, several
+  images → multi-edit (image_1 … image_6 plus an extra_images batch, different sizes allowed);
+  model list shows the input image limit, price incl. extra-image fees, UNCENSORED/censored;
+  too many images stop before billing; aspect ratio / resolution / quality per model
+- New: **docs/MODELS.md / MODELS.de.md**: capabilities of every image, edit and video model
+  (generated from the model list by `tools/generate_model_docs.py`)
+- New: six **example workflows** with notes in `example_workflows/` (shown as templates in ComfyUI)
+- Model lists mark models Venice is going to remove: `ENDS YYYY-MM-DD`
+- The Image, Image Edit and Video nodes show a fact sheet of the selected model (length, resolution,
+  audio, inputs, price, strengths, removal date); after a run the run info is shown above it
+- Model catalogue now also holds the edit models (Venice type "inpaint"); an older cache without
+  them is completed from the shipped snapshot and refreshed
+
 ## 1.0.0
 - New: **Venice AI · Image**: every Venice image model; aspect ratio / resolution / quality per model,
   width/height for free-size models, safe_mode off by default, price in `info`

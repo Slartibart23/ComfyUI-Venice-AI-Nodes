@@ -1,0 +1,430 @@
+{
+ "id": "8b07158a-fc7e-4ee9-bcc2-bbe8107d03c1",
+ "revision": 0,
+ "last_node_id": 3,
+ "last_link_id": 2,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "VeniceAI_Image",
+   "pos": [
+    460,
+    0
+   ],
+   "size": [
+    380,
+    518
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "COMBO",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "negative_prompt",
+     "name": "negative_prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "negative_prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "aspect_ratio",
+     "name": "aspect_ratio",
+     "type": "COMBO",
+     "widget": {
+      "name": "aspect_ratio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "resolution",
+     "name": "resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "quality",
+     "name": "quality",
+     "type": "COMBO",
+     "widget": {
+      "name": "quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "width",
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "height",
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "steps",
+     "name": "steps",
+     "type": "INT",
+     "widget": {
+      "name": "steps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "cfg_scale",
+     "name": "cfg_scale",
+     "type": "FLOAT",
+     "widget": {
+      "name": "cfg_scale"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "variants",
+     "name": "variants",
+     "type": "INT",
+     "widget": {
+      "name": "variants"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "seed",
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "safe_mode",
+     "name": "safe_mode",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "safe_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "hide_watermark",
+     "name": "hide_watermark",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "hide_watermark"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "api_key",
+     "name": "api_key",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "api_key"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "links": [
+      1
+     ]
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "links": [
+      2
+     ]
+    },
+    {
+     "localized_name": "info",
+     "name": "info",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_Image"
+   },
+   "widgets_values": [
+    "Z-Image Turbo · $0.01 · censored · private · z-image-turbo",
+    "A cozy reading nook by a rainy window, warm lamp light, cinematic photo",
+    "",
+    "16:9",
+    "auto",
+    "auto",
+    1024,
+    1024,
+    0,
+    0,
+    1,
+    0,
+    "fixed",
+    false,
+    true,
+    ""
+   ],
+   "widgets_values_named": {
+    "model": "Z-Image Turbo · $0.01 · censored · private · z-image-turbo",
+    "prompt": "A cozy reading nook by a rainy window, warm lamp light, cinematic photo",
+    "negative_prompt": "",
+    "aspect_ratio": "16:9",
+    "resolution": "auto",
+    "quality": "auto",
+    "width": 1024,
+    "height": 1024,
+    "steps": 0,
+    "cfg_scale": 0,
+    "variants": 1,
+    "seed": 0,
+    "control_after_generate": "fixed",
+    "safe_mode": false,
+    "hide_watermark": true,
+    "api_key": ""
+   }
+  },
+  {
+   "id": 2,
+   "type": "VeniceAI_SaveImagePlusPrompt",
+   "pos": [
+    900,
+    0
+   ],
+   "size": [
+    360,
+    366
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 1
+    },
+    {
+     "localized_name": "prompt_text",
+     "name": "prompt_text",
+     "shape": 7,
+     "type": "STRING",
+     "link": 2
+    },
+    {
+     "localized_name": "custom_path",
+     "name": "custom_path",
+     "type": "STRING",
+     "widget": {
+      "name": "custom_path"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "filename_prefix",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "timestamp",
+     "name": "timestamp",
+     "type": "COMBO",
+     "widget": {
+      "name": "timestamp"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "format",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "quality",
+     "name": "quality",
+     "type": "INT",
+     "widget": {
+      "name": "quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "dpi",
+     "name": "dpi",
+     "type": "INT",
+     "widget": {
+      "name": "dpi"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "meta_data",
+     "name": "meta_data",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "meta_data"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "save_workflow_as_json",
+     "name": "save_workflow_as_json",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_workflow_as_json"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preview",
+     "name": "preview",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "preview"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_SaveImagePlusPrompt"
+   },
+   "widgets_values": [
+    "",
+    "venice_image",
+    "None",
+    "jpg",
+    80,
+    300,
+    false,
+    false,
+    true
+   ],
+   "widgets_values_named": {
+    "custom_path": "",
+    "filename_prefix": "venice_image",
+    "timestamp": "None",
+    "format": "jpg",
+    "quality": 80,
+    "dpi": 300,
+    "meta_data": false,
+    "save_workflow_as_json": false,
+    "preview": true
+   }
+  },
+  {
+   "id": 3,
+   "type": "MarkdownNote",
+   "pos": [
+    0,
+    0
+   ],
+   "size": [
+    420,
+    520
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## Venice AI · Text to image\n\nPick any of the ~45 Venice image models in **model**. Each entry shows price per image, **UNCENSORED/censored**, *private* and the model ID. ★ = your favourites (`Venice_AI_favourites.txt`).\n\n* **aspect_ratio / resolution / quality** only offer what the model supports.\n* Models without fixed ratios (Lustify, Chroma, SD 3.5 …) use width/height: pick a ratio, or *custom*.\n* **safe_mode** off = no blurring of adult content. **variants** 1–4 (each billed).\n* **prompt** output → saved as `.txt` next to the image.\n\nCheap & fast: Z-Image Turbo, Lustify, Chroma ($0.01). Top quality: GPT Image 2.5, Nano Banana Pro, Flux 3, Seedream V5 Pro.\n\nAll capabilities: [MODELS.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.md)\n\n🇩🇪 Bild aus Text. Alle Fähigkeiten: [MODELS.de.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.de.md)\n\n**API key:** put your Venice key into `Venice_AI_API.txt` in the ComfyUI folder (one line). Every run is billed to your Venice account.\n\n🇩🇪 Key in `Venice_AI_API.txt` im ComfyUI-Ordner. Jeder Lauf kostet Venice-Guthaben."
+   ],
+   "widgets_values_named": {
+    "text": "## Venice AI · Text to image\n\nPick any of the ~45 Venice image models in **model**. Each entry shows price per image, **UNCENSORED/censored**, *private* and the model ID. ★ = your favourites (`Venice_AI_favourites.txt`).\n\n* **aspect_ratio / resolution / quality** only offer what the model supports.\n* Models without fixed ratios (Lustify, Chroma, SD 3.5 …) use width/height: pick a ratio, or *custom*.\n* **safe_mode** off = no blurring of adult content. **variants** 1–4 (each billed).\n* **prompt** output → saved as `.txt` next to the image.\n\nCheap & fast: Z-Image Turbo, Lustify, Chroma ($0.01). Top quality: GPT Image 2.5, Nano Banana Pro, Flux 3, Seedream V5 Pro.\n\nAll capabilities: [MODELS.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.md)\n\n🇩🇪 Bild aus Text. Alle Fähigkeiten: [MODELS.de.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.de.md)\n\n**API key:** put your Venice key into `Venice_AI_API.txt` in the ComfyUI folder (one line). Every run is billed to your Venice account.\n\n🇩🇪 Key in `Venice_AI_API.txt` im ComfyUI-Ordner. Jeder Lauf kostet Venice-Guthaben."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   2,
+   0,
+   "IMAGE"
+  ],
+  [
+   2,
+   1,
+   1,
+   2,
+   1,
+   "STRING"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ue_links": [],
+  "ds": {
+   "scale": 1,
+   "offset": [
+    0,
+    0
+   ]
+  }
+ },
+ "version": 0.4
+}

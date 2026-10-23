@@ -40,6 +40,15 @@ def image_to_data_url(img: torch.Tensor) -> str:
     return _data_url("image/jpeg", buf.getvalue())
 
 
+def image_to_base64(img: torch.Tensor) -> str:
+    """Plain base64 (no data: prefix), as the image edit endpoints expect."""
+    return image_to_data_url(img).split(",", 1)[1]
+
+
+def bytes_to_tensor(raw: bytes) -> torch.Tensor:
+    return pil_to_tensor(Image.open(io.BytesIO(raw)))
+
+
 def images_to_data_urls(images: torch.Tensor, limit: int) -> list:
     return [image_to_data_url(images[i]) for i in range(min(images.shape[0], limit))]
 

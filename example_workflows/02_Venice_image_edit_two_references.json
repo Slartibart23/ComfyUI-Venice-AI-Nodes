@@ -1,0 +1,564 @@
+{
+ "id": "e6d065d7-9b74-4d07-b2f1-d29b992e5a02",
+ "revision": 0,
+ "last_node_id": 5,
+ "last_link_id": 4,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "LoadImage",
+   "pos": [
+    460,
+    0
+   ],
+   "size": [
+    320,
+    102
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      1
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfy-core",
+    "ver": "0.41.2",
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "example.png",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "example.png",
+    "upload": "image"
+   }
+  },
+  {
+   "id": 2,
+   "type": "LoadImage",
+   "pos": [
+    460,
+    400
+   ],
+   "size": [
+    320,
+    102
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      2
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfy-core",
+    "ver": "0.41.2",
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "example.png",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "example.png",
+    "upload": "image"
+   }
+  },
+  {
+   "id": 3,
+   "type": "VeniceAI_ImageEdit",
+   "pos": [
+    820,
+    0
+   ],
+   "size": [
+    380,
+    424
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image_1",
+     "name": "image_1",
+     "type": "IMAGE",
+     "link": 1
+    },
+    {
+     "localized_name": "image_2",
+     "name": "image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 2
+    },
+    {
+     "localized_name": "image_3",
+     "name": "image_3",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "image_4",
+     "name": "image_4",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "image_5",
+     "name": "image_5",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "image_6",
+     "name": "image_6",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "extra_images",
+     "name": "extra_images",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "COMBO",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "aspect_ratio",
+     "name": "aspect_ratio",
+     "type": "COMBO",
+     "widget": {
+      "name": "aspect_ratio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "resolution",
+     "name": "resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "quality",
+     "name": "quality",
+     "type": "COMBO",
+     "widget": {
+      "name": "quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "safe_mode",
+     "name": "safe_mode",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "safe_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "transparent_background",
+     "name": "transparent_background",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "transparent_background"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "variation",
+     "name": "variation",
+     "type": "INT",
+     "widget": {
+      "name": "variation"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "api_key",
+     "name": "api_key",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "api_key"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "links": [
+      3
+     ]
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "links": [
+      4
+     ]
+    },
+    {
+     "localized_name": "info",
+     "name": "info",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_ImageEdit"
+   },
+   "widgets_values": [
+    "Qwen Image 2.1 Turbo · max 6 img · $0.02 · UNCENSORED · qwen-image-2-1-turbo-edit",
+    "The person from image 1 sits on the sofa from image 2, natural light, photorealistic",
+    "auto",
+    "auto",
+    "auto",
+    false,
+    false,
+    0,
+    "fixed",
+    ""
+   ],
+   "widgets_values_named": {
+    "model": "Qwen Image 2.1 Turbo · max 6 img · $0.02 · UNCENSORED · qwen-image-2-1-turbo-edit",
+    "prompt": "The person from image 1 sits on the sofa from image 2, natural light, photorealistic",
+    "aspect_ratio": "auto",
+    "resolution": "auto",
+    "quality": "auto",
+    "safe_mode": false,
+    "transparent_background": false,
+    "variation": 0,
+    "control_after_generate": "fixed",
+    "api_key": ""
+   }
+  },
+  {
+   "id": 4,
+   "type": "VeniceAI_SaveImagePlusPrompt",
+   "pos": [
+    1240,
+    0
+   ],
+   "size": [
+    360,
+    366
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 3
+    },
+    {
+     "localized_name": "prompt_text",
+     "name": "prompt_text",
+     "shape": 7,
+     "type": "STRING",
+     "link": 4
+    },
+    {
+     "localized_name": "custom_path",
+     "name": "custom_path",
+     "type": "STRING",
+     "widget": {
+      "name": "custom_path"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "filename_prefix",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "timestamp",
+     "name": "timestamp",
+     "type": "COMBO",
+     "widget": {
+      "name": "timestamp"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "format",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "quality",
+     "name": "quality",
+     "type": "INT",
+     "widget": {
+      "name": "quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "dpi",
+     "name": "dpi",
+     "type": "INT",
+     "widget": {
+      "name": "dpi"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "meta_data",
+     "name": "meta_data",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "meta_data"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "save_workflow_as_json",
+     "name": "save_workflow_as_json",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_workflow_as_json"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preview",
+     "name": "preview",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "preview"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "cnr_id": "comfyui-venice-ai-nodes",
+    "ver": "b7328545a9a1677a0db9ea9b4d23f9fc06292975",
+    "Node name for S&R": "VeniceAI_SaveImagePlusPrompt"
+   },
+   "widgets_values": [
+    "",
+    "venice_edit",
+    "None",
+    "jpg",
+    80,
+    300,
+    false,
+    false,
+    true
+   ],
+   "widgets_values_named": {
+    "custom_path": "",
+    "filename_prefix": "venice_edit",
+    "timestamp": "None",
+    "format": "jpg",
+    "quality": 80,
+    "dpi": 300,
+    "meta_data": false,
+    "save_workflow_as_json": false,
+    "preview": true
+   }
+  },
+  {
+   "id": 5,
+   "type": "MarkdownNote",
+   "pos": [
+    0,
+    0
+   ],
+   "size": [
+    420,
+    520
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## Venice AI · Image edit / combine references\n\n* **image_1** = image to edit. **image_2 … image_6** and **extra_images** (batch) = more references; sizes may differ.\n* One image → edit, several → combined. Refer to them in the prompt: *\"the person from image 1 … the sofa from image 2\"*.\n* The model list shows **max N img** (`1 img` = Luma, no combining; `multi img` = no limit stated). Too many images stop the run **before** anything is billed.\n* Some models charge per extra input image (`+` in the price).\n* **aspect_ratio auto** = format of image_1. Change **variation** for another result.\n\nUncensored edit models: Qwen Edit Uncensored, Qwen Image 2.1/3, Seedream V4.5/V5. Up to 10 images: Qwen Image 2.1 Pro Edit.\n\nAll edit models: [MODELS.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.md)\n\n🇩🇪 Bild bearbeiten oder mehrere Referenzbilder kombinieren. [MODELS.de.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.de.md)\n\n**API key:** put your Venice key into `Venice_AI_API.txt` in the ComfyUI folder (one line). Every run is billed to your Venice account.\n\n🇩🇪 Key in `Venice_AI_API.txt` im ComfyUI-Ordner. Jeder Lauf kostet Venice-Guthaben."
+   ],
+   "widgets_values_named": {
+    "text": "## Venice AI · Image edit / combine references\n\n* **image_1** = image to edit. **image_2 … image_6** and **extra_images** (batch) = more references; sizes may differ.\n* One image → edit, several → combined. Refer to them in the prompt: *\"the person from image 1 … the sofa from image 2\"*.\n* The model list shows **max N img** (`1 img` = Luma, no combining; `multi img` = no limit stated). Too many images stop the run **before** anything is billed.\n* Some models charge per extra input image (`+` in the price).\n* **aspect_ratio auto** = format of image_1. Change **variation** for another result.\n\nUncensored edit models: Qwen Edit Uncensored, Qwen Image 2.1/3, Seedream V4.5/V5. Up to 10 images: Qwen Image 2.1 Pro Edit.\n\nAll edit models: [MODELS.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.md)\n\n🇩🇪 Bild bearbeiten oder mehrere Referenzbilder kombinieren. [MODELS.de.md](https://github.com/Slartibart23/ComfyUI-Venice-AI-Nodes/blob/main/docs/MODELS.de.md)\n\n**API key:** put your Venice key into `Venice_AI_API.txt` in the ComfyUI folder (one line). Every run is billed to your Venice account.\n\n🇩🇪 Key in `Venice_AI_API.txt` im ComfyUI-Ordner. Jeder Lauf kostet Venice-Guthaben."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   3,
+   0,
+   "IMAGE"
+  ],
+  [
+   2,
+   2,
+   0,
+   3,
+   1,
+   "IMAGE"
+  ],
+  [
+   3,
+   3,
+   0,
+   4,
+   0,
+   "IMAGE"
+  ],
+  [
+   4,
+   3,
+   1,
+   4,
+   1,
+   "STRING"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ue_links": [],
+  "ds": {
+   "scale": 1,
+   "offset": [
+    0,
+    0
+   ]
+  }
+ },
+ "version": 0.4
+}

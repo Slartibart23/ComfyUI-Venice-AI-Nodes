@@ -1,7 +1,7 @@
 # ComfyUI Venice AI Nodes (unofficial)
 
-ComfyUI nodes for the [Venice AI](https://venice.ai) API: **every Venice image and video model**
-in one image node and one video node, with the price and the censored/uncensored flag right in the
+ComfyUI nodes for the [Venice AI](https://venice.ai) API: **every Venice image, image edit and video model**
+in one image node, one edit node and one video node, with the price and the censored/uncensored flag right in the
 model list. Plus three save/load helper nodes.
 
 > **Unofficial.** This project is not affiliated with, endorsed or sponsored by Venice.ai.
@@ -13,6 +13,7 @@ model list. Plus three save/load helper nodes.
 | Node | What it does |
 |---|---|
 | **Venice AI · Image** | Text to image with every Venice image model |
+| **Venice AI · Image Edit** | Edit one image, or build a new one from several reference images (up to 10, depending on the model) |
 | **Venice AI · Video** | Text / image / reference / video to video with every Venice video model |
 | **Venice AI · Video Save Plus 🎬** | Save MP4 + audio, workflow PNG/JSON and prompt `.txt` to any folder (from [ComfyUI-CustomVideoSave](https://github.com/Slartibart23/ComfyUI-CustomVideoSave) v2.1.0) |
 | **Venice AI · Save Image + Prompt TXT** | Save images with the prompt as `.txt`, reveal / copy / delete buttons (from [ComfyUI_SaveImagePlusPrompt](https://github.com/Slartibart23/ComfyUI_SaveImagePlusPrompt_v1.4.0_save-node_prompt-txt_reveal-copy-delete-buttons) v1.4.1) |
@@ -20,6 +21,15 @@ model list. Plus three save/load helper nodes.
 
 The three bundled nodes have their **own node IDs, names and server routes**, so they run side by side
 with the original packs. All nodes are in the node menu under **Venice AI**.
+
+## Model overview and example workflows
+
+* **[docs/MODELS.md](docs/MODELS.md)**: what every Venice image, edit and video model can do (lengths,
+  resolutions, aspect ratios, audio, input images, price, strengths, uncensored, models ending soon).
+  German: [docs/MODELS.de.md](docs/MODELS.de.md). Regenerate with `python tools/generate_model_docs.py`.
+* **[example_workflows/](example_workflows)**: six ready workflows with notes (text → image, image edit
+  with two references, image → video, text → image → video, reference images → video, video → video).
+  In ComfyUI: *Workflow → Browse Templates* → this pack, or drag a `.json` onto the canvas.
 
 ## Installation
 
@@ -52,7 +62,7 @@ Seedance 2.5 · I2V · $1.44/5s · censored · seedance-2-5-image-to-video-basic
 ```
 
 * **★ favourites** come first: put model IDs (one per line) into `Venice_AI_favourites.txt` in your
-  ComfyUI folder, see [examples/Venice_AI_favourites.txt](examples/Venice_AI_favourites.txt).
+  ComfyUI folder, see [docs/Venice_AI_favourites.example.txt](docs/Venice_AI_favourites.example.txt).
 * **T2V / I2V / R2V / V2V** = text / image / reference / video to video.
 * **Price:** video at about 5 s and 720p (the actual price is quoted before every run), image per
   picture at the smallest size (`+` = larger sizes cost more).
@@ -60,6 +70,7 @@ Seedance 2.5 · I2V · $1.44/5s · censored · seedance-2-5-image-to-video-basic
   models and providers may still refuse prompts.
 * **private** = Venice states it does not pass your data on; other models are "anonymized" (sent to
   the model provider without your identity).
+* **ENDS YYYY-MM-DD** = Venice removes the model on that date (see the replacement in docs/MODELS.md).
 * The list is shipped with the pack and refreshed in the background: models once a day, video
   prices once a week (no API key needed). Reload the browser tab to see changes. Workflows keep
   working when a price changes, because the model ID at the end of the entry counts.
@@ -96,6 +107,18 @@ Typical wiring without re-encoding:
   node computes the size (max. 1280 px per side), or `custom` for your own width/height.
 * `safe_mode` is **off** by default (on = Venice blurs adult content). `variants` 1–4 images per run.
 * Outputs: `images`, `prompt` (connect to *Save Image + Prompt TXT* to store it as `.txt`), `info`.
+
+## Venice AI · Image Edit
+
+* `image_1` is the image to edit; `image_2` … `image_6` and `extra_images` (batch) add references,
+  e.g. *"the woman from image 1 sits on the sofa from image 2"*. Images may have different sizes.
+* The model list shows how many input images each model combines (`max 6 img`, `1 img` = only one,
+  `multi img` = several, no limit stated by Venice). More images than allowed stop the run before
+  anything is billed. Some models charge extra per additional input image (`+` in the price).
+* `aspect_ratio` auto = taken from the input image; `resolution` / `quality` follow the model.
+* One image uses Venice's edit endpoint, several images (or a quality level) the multi-edit endpoint.
+* Edits have no seed: change `variation` for a new result with the same settings.
+* Outputs: `images`, `prompt`, `info`.
 
 ## Legal notes
 

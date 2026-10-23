@@ -11,6 +11,7 @@ Im Auswahlmenü stehen bei jedem Modell der Preis und ob es zensiert oder unzens
 | Node | Wofür |
 |---|---|
 | **Venice AI · Image** | Bild aus Text, alle Venice-Bildmodelle |
+| **Venice AI · Image Edit** | Bild bearbeiten oder aus mehreren Referenzbildern ein neues bauen |
 | **Venice AI · Video** | Video aus Text, Bild, Referenzbildern oder Video, alle Venice-Videomodelle |
 | **Venice AI · Video Save Plus 🎬** | Video mit Ton, Workflow-PNG/JSON und Prompt-TXT speichern |
 | **Venice AI · Save Image + Prompt TXT** | Bild speichern, Prompt als TXT daneben, Buttons zum Öffnen/Kopieren/Löschen |
@@ -18,6 +19,13 @@ Im Auswahlmenü stehen bei jedem Modell der Preis und ob es zensiert oder unzens
 
 Die letzten drei sind Kopien deiner eigenen Nodes mit **eigenen IDs und Namen**. Sie laufen
 problemlos neben den Originalen.
+
+## Modellübersicht und Beispiel-Workflows
+
+* **[docs/MODELS.de.md](docs/MODELS.de.md)**: was jedes Venice-Bild-, Edit- und Videomodell kann
+  (Länge, Auflösung, Seitenverhältnis, Ton, Eingangsbilder, Preis, Stärken, unzensiert, bald abgeschaltet).
+* **[example_workflows/](example_workflows)**: sechs fertige Workflows mit Notizen. In ComfyUI über
+  *Workflow → Vorlagen durchsuchen* → dieses Paket, oder die `.json` ins Fenster ziehen.
 
 ## Einrichtung in 3 Schritten
 
@@ -29,7 +37,7 @@ problemlos neben den Originalen.
    und jedem gespeicherten Bild/Video.
 3. **Favoriten (optional):** eine Datei **`Venice_AI_favourites.txt`** in denselben Ordner legen,
    eine Modell-ID pro Zeile. Diese Modelle stehen mit ★ ganz oben. Die Modell-ID ist der letzte
-   Teil jedes Eintrags im Auswahlmenü. Vorlage: `examples/Venice_AI_favourites.txt`.
+   Teil jedes Eintrags im Auswahlmenü. Vorlage: `docs/Venice_AI_favourites.example.txt`.
 
 ## So liest du das Auswahlmenü
 
@@ -42,6 +50,7 @@ problemlos neben den Originalen.
   (`+` = größere Formate kosten mehr). Vor jedem Video fragt die Node den echten Preis ab.
 * **UNCENSORED / censored:** so kennzeichnet Venice das Modell. „censored“ heißt nur „nicht als
   unzensiert markiert“, Anbieter können Prompts trotzdem ablehnen.
+* **ENDS 2026-10-28:** Venice schaltet das Modell an diesem Tag ab (Nachfolger steht in docs/MODELS.de.md).
 * **private:** laut Venice werden deine Daten nicht weitergegeben.
 
 ## Wichtige Schalter der Video-Node
@@ -58,6 +67,16 @@ problemlos neben den Originalen.
 
 Verbindung ohne Qualitätsverlust: `video_path` der Video-Node an `source_video_path` von
 „Venice AI · Video Save Plus“, `prompt` an `prompt_text`.
+
+## Die Edit-Node (Bild bearbeiten / Bilder kombinieren)
+
+* `image_1` ist das Bild, das bearbeitet wird. Weitere Referenzen kommen an `image_2` … `image_6`
+  oder als Stapel an `extra_images`. Die Bilder dürfen unterschiedlich groß sein.
+* Im Prompt auf die Bilder Bezug nehmen, z. B. „die Frau aus Bild 1 sitzt auf dem Sofa aus Bild 2“.
+* Im Auswahlmenü steht, wie viele Bilder ein Modell verarbeitet: `max 6 img`, `1 img` (nur eins)
+  oder `multi img` (mehrere, Venice nennt keine Grenze). Sind zu viele angeschlossen, bricht die
+  Node ab, **bevor** etwas abgebucht wird.
+* `aspect_ratio` auto = Format vom Eingangsbild. `variation` ändern = neue Variante.
 
 ## Rechtliches
 
