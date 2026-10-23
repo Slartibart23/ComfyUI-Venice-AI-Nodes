@@ -145,6 +145,23 @@ def _video_info(path: str):
         return s.codec_context.width, s.codec_context.height, max(seconds, 0.1)
 
 
+def video_seconds(video) -> float:
+    """Length of a ComfyUI VIDEO in seconds."""
+    try:
+        return float(video.get_duration())
+    except Exception:
+        pass
+    src = video.get_stream_source()
+    if isinstance(src, str) and os.path.isfile(src):
+        return _video_info(src)[2]
+    path = _temp_mp4()
+    try:
+        video.save_to(path)
+        return _video_info(path)[2]
+    finally:
+        _remove(path)
+
+
 def transcode_video(src: str, dst: str, max_height: int, bitrate: int) -> None:
     """H.264 MP4 at most max_height high with the given video bitrate; AAC audio is copied."""
     import av

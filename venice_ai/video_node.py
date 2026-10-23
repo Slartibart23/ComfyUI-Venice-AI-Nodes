@@ -14,6 +14,7 @@ POLL_SECONDS = 5
 MAX_REFERENCE_IMAGES = 30
 # video-to-video models that take person photos as reference_image_urls (Venice model pages)
 V2V_PERSON_REFERENCES = {"minimax-h3-max-recast": 4}
+V2V_MAX_SECONDS = 300  # Venice: "duration must not exceed 300 seconds"
 OUTPUT_SUBFOLDER = "venice_ai"
 SEEDANCE_CONSENT = {"confirmed_terms_and_privacy": True, "confirmed_legal_right": True,
                     "confirmed_screening_acknowledged": True}
@@ -228,7 +229,16 @@ class VeniceVideo:
             payload["negative_prompt"] = negative_prompt
 
         durs = c.get("durations") or []
-        if durs:
+        if kind == "V2V" and video is not None and all(not catalog.duration_seconds(d) for d in durs):
+            # "Auto"-only video models (Recast, edits, upscale) want the input length in seconds
+            seconds = media.video_seconds(video)
+            if seconds > V2V_MAX_SECONDS:
+                raise VeniceError(f"{LOG} The input video is {seconds:.0f} s long, {e['name']} takes at most "
+                                  f"{V2V_MAX_SECONDS} s. Trim it first. Nothing was billed.")
+            payload["duration"] = str(max(1, round(seconds)))
+            if duration not in ("Auto", "auto"):
+                notes.append(f"duration follows the input video ({payload['duration']} s)")
+        elif durs:
             d = _nearest(duration, durs, catalog.duration_seconds)
             if d != duration:
                 notes.append(f"duration {duration} not offered by this model, used {d}")

@@ -420,6 +420,17 @@ class RecastTests(VideoHelpers):
         self.assertNotIn("image_url", p)
         self.assertTrue(p["video_url"].startswith("data:video/mp4"))
 
+    def test_v2v_duration_is_the_input_length(self):
+        self.run_node("minimax-h3-max-recast", video=self.video(), image=torch.rand(1, 512, 512, 3))
+        self.assertEqual(self.payload()["duration"], "1")  # the 8-frame 8 fps test clip = 1 s
+        self.assertEqual(self.payload("/video/quote")["duration"], "1")
+        self.calls.clear(); self.retrieves = 0
+        with mock.patch.object(media, "video_seconds", lambda v: 301.0):
+            with self.assertRaises(api.VeniceError) as cm:
+                self.run_node("minimax-h3-max-recast", video=self.video(), image=torch.rand(1, 512, 512, 3))
+        self.assertIn("at most 300 s", str(cm.exception))
+        self.assertEqual(self.calls, [])
+
     def test_recast_too_many_persons(self):
         with self.assertRaises(api.VeniceError) as cm:
             self.run_node("minimax-h3-max-recast", video=self.video(), image=torch.rand(1, 512, 512, 3),

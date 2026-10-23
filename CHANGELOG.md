@@ -16,6 +16,8 @@
   limit, AAC audio kept) and noted in info; images are never rescaled, a too large image stops
   before anything is billed with a hint to scale it (e.g. Load & Resize); request size is checked
   before sending
+- Fix: video-to-video models listed with duration 'Auto' (Recast, edits, upscale) need the input
+  video length in seconds; it is measured and sent (max. 300 s, checked before billing)
 - MiniMax H3 Max Recast: person photos (image / reference_images, up to 4, left to right) are sent as
   reference_image_urls, so the people in the input video are replaced; fact sheet explains usage and
   per-second pricing
