@@ -127,6 +127,9 @@ Typical wiring without re-encoding:
 
 ## Legal notes
 
+* Use of the Venice API through these nodes is subject to the [Venice Terms of Service](https://venice.ai/legal/tos); by using the nodes you agree to them.
+* No warranty of any kind regarding the Venice API, its models or availability. Prices, model
+  capabilities, censorship and privacy flags are shown as reported by Venice.
 * Use your own key only. Venice does not allow sharing or reselling API access.
 * You are responsible for what you generate. Do not use a real person's face, voice or likeness
   without their consent, and follow the [Venice terms](https://venice.ai/legal/tos) and the law of

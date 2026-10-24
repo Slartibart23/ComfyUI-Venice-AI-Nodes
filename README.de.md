@@ -85,6 +85,9 @@ Verbindung ohne Qualitätsverlust: `video_path` der Video-Node an `source_video_
 
 ## Rechtliches
 
+* Für die Nutzung der Venice-API über diese Nodes gelten die [Nutzungsbedingungen von Venice](https://venice.ai/legal/tos); mit der Nutzung stimmst du ihnen zu.
+* Keine Gewährleistung für die Venice-API, ihre Modelle oder ihre Verfügbarkeit. Preise, Fähigkeiten,
+  Zensur- und Datenschutz-Kennzeichnung werden so angezeigt, wie Venice sie angibt.
 * Nur den eigenen Key benutzen, Weitergabe ist laut Venice verboten.
 * Du bist für die erzeugten Inhalte verantwortlich. Gesichter, Stimmen oder Abbilder echter
   Personen nur mit deren Einwilligung verwenden.
